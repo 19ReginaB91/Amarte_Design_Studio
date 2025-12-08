@@ -1,0 +1,606 @@
+/* ==================================== */
+/* 1. Глобальные стили и переменные */
+/* ==================================== */
+
+:root {
+    /* Цветовая палитра */
+    --color-accent-lime: #CCFF00; 
+    --color-accent-red: #ff006a; 
+    --color-bg-light: #F7F7F7; 
+    --color-text-dark: #333333; 
+    --color-header-bg: #FFFFFF; 
+
+    /* Шрифты */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    background-color: var(--color-bg-light);
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-text-dark);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2 i {
+    color: var(--color-accent-red);
+    margin-right: 10px;
+}
+
+/* ==================================== */
+/* 2. HEADER / ШАПКА и НАВИГАЦИЯ */
+/* ==================================== */
+
+header {
+    background-color: var(--color-header-bg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+/* Стили для логотипа-изображения */
+.logo-img {
+    height: 80px; 
+    width: auto;
+    display: block;
+}
+
+nav a {
+    color: var(--color-text-dark);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-accent-lime);
+}
+
+/* Стили для переключателя языка */
+.language-switcher {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.lang-button {
+    background: none;
+    border: 1px solid var(--color-text-dark);
+    color: var(--color-text-dark);
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 4px;
+}
+
+.lang-button:hover {
+    background-color: var(--color-bg-light);
+}
+
+.lang-button.active {
+    background-color: var(--color-accent-red); 
+    color: #FFFFFF;
+    border-color: var(--color-accent-red);
+}
+
+/* ==================================== */
+/* 3. HERO SECTION / ДИНАМИЧЕСКИЙ ФОН */
+/* ==================================== */
+
+.hero-section {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+}
+
+/* Контейнер для изображений */
+.hero-backgrounds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Слой для каждого изображения */
+.hero-bg-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; 
+    transition: opacity 1.5s ease-in-out; 
+}
+
+.hero-bg-item.active {
+    opacity: 1; 
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5); 
+    position: relative; 
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    color: #FFFFFF;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    color: #FFFFFF;
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Кнопка Call-to-Action (CTA) */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-accent-lime); 
+    color: var(--color-text-dark);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: #AACC00; 
+    transform: translateY(-2px);
+}
+
+/* ==================================== */
+/* 4. ABOUT, SERVICES, PROMO */
+/* ==================================== */
+
+/* Секция О нас */
+.about-section {
+    background-color: #FFFFFF;
+}
+.about-section .intro-text {
+    font-style: italic;
+    color: var(--color-accent-red);
+    font-size: 1.1em;
+    margin-bottom: 25px;
+}
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+}
+
+/* Секция Услуг */
+.services-section {
+    background-color: var(--color-bg-light);
+}
+
+.service-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-item {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    width: 250px;
+    transition: transform 0.3s;
+    
+    /* ИСПРАВЛЕНО: Убрана фиксированная height, добавлена min-height */
+    min-height: 250px; 
+    height: auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Начинаем контент сверху */
+    align-items: center;
+    text-align: center;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-item i {
+    font-size: 3em;
+    color: var(--color-accent-red);
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+.service-item p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.guarantee-text {
+    margin-top: 50px;
+    font-weight: 600;
+    color: var(--color-accent-lime);
+    font-size: 1.1em;
+}
+
+/* Секция Акции */
+.promo-section {
+    background-color: var(--color-accent-red); 
+    color: #FFFFFF;
+    padding: 60px 0;
+}
+
+.promo-section h2 {
+    color: #FFFFFF;
+}
+
+.discount-text {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.discount-text strong {
+    color: var(--color-accent-lime);
+}
+
+.promo-section p {
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+
+/* ==================================== */
+/* 5. GALLERY SECTION / ГАЛЕРЕЯ */
+/* ==================================== */
+
+.gallery-section {
+    background-color: #FFFFFF;
+}
+
+.gallery-section .intro-text {
+    font-style: italic;
+    color: var(--color-text-dark);
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивная сетка */
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Обрезает изображение, чтобы оно поместилось в квадрат */
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ==================================== */
+/* 5.1. МОДАЛЬНОЕ ОКНО (Modal) */
+/* ==================================== */
+
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; 
+    z-index: 2000; /* Должно быть выше всего */
+    padding-top: 60px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.9); /* Черный фон с прозрачностью */
+}
+
+.modal-content-wrapper {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Для центрирования и подписи */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh; 
+    object-fit: contain; /* Картинка полностью видна, не обрезается */
+}
+
+/* Кнопка закрытия */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 2001;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--color-accent-lime);
+    text-decoration: none;
+}
+
+/* Стрелки навигации */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2001; /* Поверх картинки */
+}
+
+.prev {
+    left: 10px;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 10px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Подпись под изображением */
+.caption-text {
+    margin-top: 15px;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+
+/* ==================================== */
+/* 6. CONTACTS / КОНТАКТЫ & FOOTER */
+/* ==================================== */
+
+.contact-section {
+    background-color: #FFFFFF;
+}
+
+/* Стили для E-mail и адреса */
+.contact-details {
+    margin: 40px auto 0 auto; 
+    max-width: 500px;
+    text-align: left;
+}
+
+.contact-details p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+}
+
+.contact-details i {
+    color: var(--color-accent-lime);
+    font-size: 1.2em;
+    width: 30px;
+}
+
+.contact-details a {
+    color: var(--color-accent-red);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.contact-details a:hover {
+    color: var(--color-accent-lime);
+}
+
+/* Стили для Социальных Сетей (Иконки) */
+.social-links {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.social-links a {
+    color: var(--color-accent-red); 
+    font-size: 2.5em; 
+    text-decoration: none;
+    transition: color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: var(--color-accent-lime); 
+    transform: scale(1.1);
+}
+
+.footer-note {
+    font-style: italic;
+    color: #999;
+    font-size: 0.9em;
+    margin-top: 30px;
+}
+
+footer {
+    background-color: var(--color-text-dark);
+    color: #CCCCCC;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* ==================================== */
+/* 7. Адаптивность (Медиа-запросы) */
+/* ==================================== */
+
+@media (max-width: 768px) {
+    /* Общие стили для мобильных */
+    section {
+        padding: 60px 0;
+    }
+    h1 {
+        font-size: 2.5em !important;
+    }
+    h2 {
+        font-size: 2em;
+    }
+
+    /* Шапка (навигация) */
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    .logo {
+        order: 0;
+    }
+    nav {
+        order: 2; 
+        margin-top: 10px;
+    }
+    nav a {
+        margin: 0 10px;
+        font-size: 0.9em;
+    }
+    .language-switcher {
+        order: 1; 
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    /* Геройский блок */
+    .hero-section {
+        height: 60vh;
+    }
+    .hero-content {
+        padding: 0 20px;
+    }
+    
+    /* Услуги */
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-item {
+        width: 80%;
+        max-width: 350px;
+        height: auto; 
+    }
+    
+    /* Галерея */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery-item {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Для совсем маленьких экранов */
+    .hero-content h1 {
+        font-size: 2em !important;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}

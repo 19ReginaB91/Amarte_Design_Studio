@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amarte Design Studio — Kunst, die berührt</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png"> 
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="assets/media/logo.png" alt="Amarte Design Studio Logo" class="logo-img">
+            </div>
+            <nav>
+                <a href="#hero" data-key="navHome">Startseite</a>
+                <a href="#about" data-key="navAbout">Über Uns</a>
+                <a href="#services" data-key="navServices">Leistungen</a>
+                <a href="#gallery" data-key="navGallery">Galerie</a>
+                <a href="#promo" data-key="navPromo">Aktion</a>
+                <a href="#contact" data-key="navContact">Kontakt</a>
+            </nav>
+            <div class="language-switcher">
+                <button id="lang-de" class="lang-button active" data-lang="de">DE</button>
+               
+                <button id="lang-en" class="lang-button" data-lang="en">EN</button>
+                <button id="lang-nl" class="lang-button" data-lang="nl">NL</button>
+                 <button id="lang-ru" class="lang-button" data-lang="ru">RU</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-backgrounds">
+            <div class="hero-bg-item active" style="background-image: url('hero-1.jpg');"></div>
+            <div class="hero-bg-item" style="background-image: url('hero-2.jpg');"></div>
+            <div class="hero-bg-item" style="background-image: url('hero-3.jpg');"></div>
+        </div>
+        
+        <div class="hero-overlay">
+            <div class="container hero-content">
+                <h1 data-key="heroHeading">Kunst, die von Herzen kommt.</h1>
+                <p data-key="heroSub">„Nicht jedes Geschenk braucht Glitzer. Manche brauchen einfach nur Herz.“ ✨</p>
+                <a href="#contact" class="cta-button" data-key="heroCTA">Ihr persönliches Geschenk jetzt bestellen</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 data-key="aboutHeading"><i class="fas fa-heart"></i> Unsere Philosophie</h2>
+            <p class="intro-text" data-key="aboutIntro">Wir glauben: Ein Geschenk ist mehr als nur ein Objekt – es ist ein Gefühl, das bleibt.</p>
+            <p data-key="aboutText"><strong>Amarte Design Studio</strong> ist Ihr Partner für einzigartige und gefühlvolle Kunstwerke. Wir transformieren Ihre Wünsche in handgefertigte Unikate, die eine Geschichte erzählen. **Jedes Design wird von der Künstlerin persönlich entwickelt** und fertiggestellt, wodurch wir höchste Qualität und absolute Individualität garantieren. Wir stehen für Kunst, die von Herzen kommt und Herzen berührt. Unser Fokus liegt auf detailverliebter, individueller Handarbeit.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 data-key="servicesHeading"><i class="fas fa-palette"></i> Unser Leistungsspektrum</h2>
+            <div class="service-list">
+                
+                <div class="service-item">
+                    <i class="fas fa-gift"></i>
+                    <h3 data-key="service1Title">Handgefertigte Unikate</h3>
+                    <p data-key="service1Text">Geschenke für besondere Anlässe, die Emotionen wecken. Von personalisierten Tassen, Postkarten bis hin zu individuellen Holzarbeiten und Schmuckstücken.</p>
+                </div>
+                
+                <div class="service-item">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3 data-key="service2Title">Porträts & Kunstwerke</h3>
+                    <p data-key="service2Text">Erstellen Sie ein unvergessliches Porträt (digital oder traditionell) von Menschen, Paaren oder Haustieren. Kunst als Ausdruck Ihrer Persönlichkeit und Erinnerung.</p>
+                </div>
+                
+                <div class="service-item">
+                    <i class="fas fa-bookmark"></i>
+                    <h3 data-key="service3Title">Buchzeichen & Kleinkunst</h3>
+                    <p data-key="service3Text">Ein kleines, aber feines Geschenk oder ein elegantes Accessoire für Sie selbst. Hochwertige, handbemalte Buchzeichen, Kalender oder andere individuelle Kleinkunstwerke.</p>
+                </div>
+                
+                <div class="service-item">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3 data-key="service4Title">Grafik & Corporate Design</h3>
+                    <p data-key="service4Text">Entwicklung Ihres Firmenlogos, Visitenkarten, Flyer und Werbebanner. Wir geben Ihrer Marke ein visuelles Herz und eine individuelle Identität.</p>
+                </div>
+            </div>
+            <p class="guarantee-text" data-key="servicesGuarantee">⭐ Wir verwandeln Ihre Wünsche und Ideen in einzigartige, handgemachte Realität!</p>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 data-key="galleryHeading"><i class="fas fa-image"></i> Unsere Kunstwerke</h2>
+            <p class="intro-text" data-key="galleryIntro">Entdecken Sie eine Auswahl unserer handgefertigten Unikate und Porträts. Klicken Sie auf ein Bild, um es in voller Größe zu sehen.</p>
+            
+            <div class="gallery-grid">
+                <img src="mini-1.jpg" data-full="full-1.jpg" alt="Gemälde 1" class="gallery-item">
+                <img src="mini-2.jpg" data-full="full-2.jpg" alt="Gemälde 2" class="gallery-item">
+                <img src="mini-3.jpg" data-full="full-3.jpg" alt="Gemälde 3" class="gallery-item">
+                <img src="mini-4.jpg" data-full="full-4.jpg" alt="Gemälde 4" class="gallery-item">
+                <img src="mini-5.jpg" data-full="full-5.jpg" alt="Gemälde 5" class="gallery-item">
+                <!-- <img src="mini-6.jpg" data-full="full-6.jpg" alt="Gemälde 6" class="gallery-item"> -->
+                </div>
+            
+            <p class="guarantee-text" data-key="galleryGuarantee">Alle Werke sind handgefertigt und einzigartig.</p>
+
+        </div>
+    </section>
+
+    <section id="promo" class="promo-section">
+        <div class="container">
+            <h2 data-key="promoHeading">Ihr Weihnachtsgeschenk von uns!</h2>
+            <p class="discount-text" data-key="promoDiscount">Sichern Sie sich **10% Rabatt** auf Ihre Bestellung!</p>
+            <p data-key="promoText">Bestellen Sie jetzt Ihr persönliches Geschenk und sorgen Sie für sich und alle, die Sie lieben, für ein unvergessliches Unikat.</p>
+            <a href="#contact" class="cta-button" data-key="promoCTA">Jetzt mit Rabatt bestellen</a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 data-key="contactHeading"><i class="fas fa-envelope"></i> Kontakt</h2>
+            
+            <div class="contact-details">
+                <p><i class="fas fa-map-marker-alt"></i> <strong data-key="contactAddress">Adresse:</strong> Wesel 46485</p>
+                <p><i class="fas fa-at"></i> <strong data-key="contactEmail">E-Mail:</strong> <a href="mailto:amartedesignstudio@gmail.com">amartedesignstudio@gmail.com</a></p>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://wa.me/49176471560176" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                
+                <a href="https://www.instagram.com/ваш-инстаграм" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                
+                <a href="https://www.facebook.com/ваш-фейсбук" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            
+            <p class="footer-note" data-key="footerNote">Amarte Design Studio startet offiziell im Januar 2026 – aber wir möchten euch schon jetzt überraschen!</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" data-key="footer">
+            &copy; 2025 Amarte Design Studio. Alle Rechte vorbehalten.
+        </div>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <div class="modal-content-wrapper">
+            <img class="modal-content" id="modalImage" alt="">
+            <a class="prev" id="prevButton">&#10094;</a>
+            <a class="next" id="nextButton">&#10095;</a>
+            <div id="caption" class="caption-text"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script> 
+
+</body>
+</html>
