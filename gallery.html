@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="pageTitle">Amarte Design Studio — Galerie</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery-style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="assets/media/logo.png" alt="Amarte Design Studio Logo" class="logo-img">
+            </div>
+            <nav>
+                <a href="index.html" data-key="navHome">Startseite</a>
+                <a href="about.html" data-key="navAbout">Über Uns</a>
+                <a href="services.html" data-key="navServices">Leistungen</a>
+                <a href="gallery.html" data-key="navGallery">Galerie</a>
+                <a href="promo.html" data-key="navPromo">Aktion</a>
+                <a href="contact.html" data-key="navContact">Kontakt</a>
+            </nav>
+            <!-- <div class="language-switcher">
+                <button id="lang-de" class="lang-button active" data-lang="de">DE</button>
+                <button id="lang-en" class="lang-button" data-lang="en">EN</button>
+                <button id="lang-nl" class="lang-button" data-lang="nl">NL</button>
+                <button id="lang-ru" class="lang-button" data-lang="ru">RU</button>
+            </div> -->
+        </div>
+    </header>
+
+    <main class="gallery-page-main">
+        <section class="gallery-hero">
+            <div class="container">
+                <h1 data-key="galleryHeading">Unsere Kunstwerke</h1>
+                <p class="gallery-tagline" data-key="galleryIntro">
+                    Entdecken Sie eine Auswahl unserer handgefertigten Unikate und Porträts. Jeder Klick открывает историю.
+                </p>
+            </div>
+        </section>
+
+        <section id="artwork-grid" class="artwork-grid-section">
+            <div class="container">
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Alle</button>
+                    <button class="filter-btn" data-filter="portraits">Porträts</button>
+                    <button class="filter-btn" data-filter="gifts">Unikate</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                </div>
+
+                <div class="art-grid">
+                    
+                    <div class="gallery-item item-portrait" data-category="portraits" 
+                         data-full="assets/gallery/full/portrait_1_full.jpg" 
+                         data-title="Familienportrait 'Glücksmomente'">
+                        <img src="assets/gallery/portrait_1_thumb.jpg" alt="Familienportrait auf Leinwand">
+                        <div class="overlay">
+                            <span class="view-details" data-key="galleryViewDetails">Details anzeigen</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item item-design" data-category="design" 
+                         data-full="assets/gallery/full/design_2_full.jpg" 
+                         data-title="Corporate Design 'Kaffeeliebe'">
+                        <img src="assets/gallery/design_2_thumb.jpg" alt="Logo und Visitenkarte">
+                        <div class="overlay">
+                            <span class="view-details" data-key="galleryViewDetails">Details anzeigen</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item item-gift" data-category="gifts" 
+                         data-full="assets/gallery/full/gift_3_full.jpg" 
+                         data-title="Personalisierte Tasse 'Lieblingsmensch'">
+                        <img src="assets/gallery/gift_3_thumb.jpg" alt="Handgemalte Tasse">
+                        <div class="overlay">
+                            <span class="view-details" data-key="galleryViewDetails">Details anzeigen</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item item-portrait" data-category="portraits" 
+                         data-full="assets/gallery/full/portrait_4_full.jpg" 
+                         data-title="Haustierportrait 'Max'">
+                        <img src="assets/gallery/portrait_4_thumb.jpg" alt="Aquarell Hundeportrait">
+                        <div class="overlay">
+                            <span class="view-details" data-key="galleryViewDetails">Details anzeigen</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item item-gift" data-category="gifts" 
+                         data-full="assets/gallery/full/gift_5_full.jpg" 
+                         data-title="Geschenkbox 'Mutterliebe'">
+                        <img src="assets/gallery/gift_5_thumb.jpg" alt="Handgemachte Geschenkbox">
+                        <div class="overlay">
+                            <span class="view-details" data-key="galleryViewDetails">Details anzeigen</span>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item item-design" data-category="design" 
+                         data-full="assets/gallery/full/design_6_full.jpg" 
+                         data-title="Illustrierter Flyer">
+                        <img src="assets/gallery/design_6_thumb.jpg" alt="Flyer Design für Event">
+                        <div class="overlay">
+                            <span class="view-details" data-key="galleryViewDetails">Details anzeigen</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <div id="imageModal" class="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <div class="modal-content">
+            <img class="modal-img" id="modalImage" src="" alt="">
+            <div class="modal-info">
+                <p id="caption" class="modal-caption"></p>
+                <span class="art-category"></span> 
+            </div>
+        </div>
+        <a class="prev" id="prevButton">&#10094;</a>
+        <a class="next" id="nextButton">&#10095;</a>
+    </div>
+
+    <footer>
+        <div class="container" data-key="footer">
+            &copy; 2025 Amarte Design Studio. Alle Rechte vorbehalten.
+        </div>
+    </footer>
+
+    <script src="index.js"></script> 
+</body>
+</html>

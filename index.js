@@ -7,41 +7,105 @@ const translations = {
     de: {
         // Заголовок
         pageTitle: 'Amarte Design Studio — Kunst, die berührt',
+
         // Навигация
-        navHome: 'Startseite', // НОВЫЙ КЛЮЧ
+        navHome: 'Startseite',
         navAbout: 'Über Uns',
         navServices: 'Leistungen',
-        navGallery: 'Galerie', 
+        navGallery: 'Galerie',
         navPromo: 'Aktion',
         navContact: 'Kontakt',
-        // Герой
+
+        // Герой (главная)
         heroHeading: 'Kunst, die von Herzen kommt.',
         heroSub: '„Nicht jedes Geschenk braucht Glitzer. Manche brauchen einfach nur Herz.“ ✨',
         heroCTA: 'Ihr persönliches Geschenk jetzt bestellen',
+
         // О нас
         aboutHeading: 'Unsere Philosophie',
         aboutIntro: 'Wir glauben: Ein Geschenk ist mehr als nur ein Objekt – es ist ein Gefühl, das bleibt.',
-        aboutText: '<strong>Amarte Design Studio</strong> ist Ihr Partner für einzigartige und gefühlvolle Kunstwerke. Wir transformieren Ihre Wünsche in handgefertigte Unikate, die eine Geschichte erzählen. **Jedes Design wird von der Künstlerin persönlich entwickelt** und fertiggestellt, wodurch wir höchste Qualität und absolute Individualität garantieren. Wir stehen für Kunst, die von Herzen kommt und Herzen berührt. Unser Fokus liegt auf detailverliebter, individueller Handarbeit.',
-        // Услуги
+        aboutText: '<strong>Amarte Design Studio</strong> ist Ihr Partner für einzigartige und gefühlvolle Kunstwerke. Wir transformieren Ihre Wünsche in handgefertigte Unikate, die eine Geschichte erzählen. <strong>Jedes Design wird von der Künstlerin persönlich entwickelt</strong> und fertiggestellt, wodurch wir höchste Qualität und absolute Individualität garantieren. Wir stehen für Kunst, die von Herzen kommt und Herzen berührt. Unser Fokus liegt auf detailverliebter, individueller Handarbeit.',
+
+        // НОВЫЕ КЛЮЧИ ДЛЯ ЦЕНТРАЛЬНОГО БЛОКА МИССИИ
+        missionHeading: 'Ihr Wunsch ist unser Rohstoff.',
+        missionText1: 'Die Welt sehnt sich nach <strong>Echtheit</strong>. Nach Geschenken, die nicht von der Stange, sondern direkt aus dem Herzen kommen. Hier beginnt die Magie von Amarte.',
+        missionText2: 'Wir sehen keine Objekte, wir sehen leere Leinwände. Ob es das Papier einer Visitenkarte, die Keramik eines Bechers, die Oberfläche einer Tür, eine leere Wand oder das digitale Format eines Porträts ist – jeder Gegenstand, den die Hand unseres Künstlers berührt, verwandelt sich in ein <strong>persönliches Meisterwerk</strong>.',
+        missionText3: 'Wir sind Amarte: Das Herz für Kunst, der Verstand für die Technik. Gemeinsam füllen wir die leeren Räume Ihrer Welt mit <strong>Emotionen und Erinnerungen</strong>.',
+
+        // Услуги (общий заголовок)
         servicesHeading: 'Unser Leistungsspektrum',
+        servicesTagline: 'Von kleinen, liebevollen Details bis zu durchdachtem Corporate Design – wir gestalten Kunst, die persönlich, gefühlvoll und einzigartig ist.',
+
+        // Базовые 4 услуги
         service1Title: 'Handgefertigte Unikate',
-        service1Text: 'Geschenke für besondere Anlässe, die Emotionen wecken. Von personalisierten Tassen, Postkarten bis hin zu individuellen Holzarbeiten und Schmuckstücken.',
+        service1Text: 'Geschenke für besondere Anlässe, die Emotionen wecken.',
+        service1Ex1: 'Personalisierte Tassen & Gläser',
+        service1Ex2: 'Individuelle Postkarten & Grußkarten',
+        service1Ex3: 'Holz-Objekte mit Namen, Datum oder Zitaten',
+        service1Ex4: 'Dekorative Objekte für Zuhause',
+
         service2Title: 'Porträts & Kunstwerke',
-        service2Text: 'Erstellen Sie ein unvergessliches Porträt (digital oder traditionell) von Menschen, Paaren oder Haustieren. Kunst als Ausdruck Ihrer Persönlichkeit und Erinnerung.',
+        service2Text: 'Porträts von Menschen, Paaren & Haustieren.',
+        service2Ex1: 'Porträts von Personen & Familien',
+        service2Ex2: 'Haustier-Porträts (Hunde, Katzen)',
+        service2Ex3: 'Illustrationen nach Foto',
+        service2Ex4: 'Digitale Artworks',
+
         service3Title: 'Buchzeichen & Kleinkunst',
-        service3Text: 'Ein kleines, aber feines Geschenk oder ein elegantes Accessoire für Sie selbst. Hochwertige, handbemalte Buchzeichen, Kalender oder andere individuelle Kleinkunstwerke.',
+        service3Text: 'Kleine Kunstwerke, die Freude schenken.',
+        service3Ex1: 'Handbemalte Lesezeichen',
+        service3Ex2: 'Mini-Artworks',
+        service3Ex3: 'Kalender mit Illustrationen',
+        service3Ex4: 'Geschenke für Bücherliebhaber',
+
         service4Title: 'Grafik & Corporate Design',
-        service4Text: 'Entwicklung Ihres Firmenlogos, Visitenkarten, Flyer und Werbebanner. Wir geben Ihrer Marke ein visuelles Herz und eine individuelle Identität.',
-        servicesGuarantee: '⭐ Wir verwandeln Ihre Wünsche und Ideen in einzigartige, handgemachte Realität!',
+        service4Text: 'Logos, Visitenkarten & Werbematerial.',
+        service4Ex1: 'Logo-Design',
+        service4Ex2: 'Visitenkarten & Flyer',
+        service4Ex3: 'Social Media Grafiken',
+        service4Ex4: 'Brand Guide (Farben, Schriften)',
+
+        servicesGuarantee: '⭐ Wir verwandeln Ihre Wünsche in handgemachte Realität!',
+
+        // Доп. блок: Für wen?
+        servicesForWhomTitle: 'Für wen ist Amarte Design Studio?',
+        servicesForWhomText: 'Unsere Kunst ist für Menschen gedacht, die nicht „irgendwas“ schenken möchten, sondern etwas, das wirklich von Herzen kommt.',
+        servicesForWhom1: 'Paare & Familien',
+        servicesForWhom2: 'Freunde & Angehörige',
+        servicesForWhom3: 'Selbstständige & kleine Unternehmen',
+        servicesForWhom4: 'Alle, die persönliche Details lieben',
+
+        // Доп. блок: Anlässe
+        servicesOccasionsTitle: 'Anlässe & besondere Momente',
+        servicesOccasionsText: 'Die meisten unserer Aufträge entstehen rund um emotionale Momente, an die man sich erinnern möchte:',
+        servicesOcc1: 'Geburtstage, Taufen & Hochzeiten',
+        servicesOcc2: 'Jubiläen & Jahrestage',
+        servicesOcc3: 'Umzüge, Abschiede & Neuanfänge',
+        servicesOcc4: '„Einfach so“ – um jemandem Danke zu sagen 💛',
+
+        // Доп. блок: Prozess
+        servicesProcessTitle: 'Wie läuft eine Bestellung ab?',
+        servicesStep1: 'Kontakt: Sie schreiben uns Ihre Idee (z. B. über E-Mail oder WhatsApp).',
+        servicesStep2: 'Abstimmung: Wir besprechen Stil, Farben, Format & Budget.',
+        servicesStep3: 'Entwurf: Sie erhalten einen Entwurf oder eine Skizze zur Freigabe.',
+        servicesStep4: 'Finalisierung: Das Kunstwerk wird liebevoll fertiggestellt.',
+        servicesStep5: 'Übergabe: Übergabe oder Versand – bereit zum Verschenken. 🎁',
+
         // Галерея
-        galleryHeading: 'Unsere Kunstwerke', 
-        galleryIntro: 'Entdecken Sie eine Auswahl unserer handgefertigten Unikate und Porträts. Klicken Sie auf ein Bild, um es in voller Größe zu sehen.', 
-        galleryGuarantee: 'Alle Werke sind handgefertigt und einzigartig.', 
+        galleryHeading: 'Unsere Kunstwerke',
+        galleryIntro: 'Entdecken Sie eine Auswahl unserer handgefertigten Unikate und Porträts. Jeder Klick öffnet eine Geschichte.',
+        galleryViewDetails: 'Details anzeigen',
+
+        // КЛЮЧИ ДЛЯ ФИЛЬТРОВ И МОДАЛЬНОГО ОКНА
+        filterAll: 'Alle', filterPortraits: 'Porträts', filterGifts: 'Unikate', filterDesign: 'Design',
+        categoryPortraits: 'Portrait-Kunst', categoryGifts: 'Unikat / Geschenk', categoryDesign: 'Graphic Design',
+
         // Акция
         promoHeading: 'Ihr Weihnachtsgeschenk von uns!',
-        promoDiscount: 'Sichern Sie sich **10% Rabatt** auf Ihre Bestellung!',
+        promoDiscount: 'Sichern Sie sich <strong>10% Rabatt</strong> auf Ihre Bestellung!',
         promoText: 'Bestellen Sie jetzt Ihr persönliches Geschenk und sorgen Sie für sich und alle, die Sie lieben, für ein unvergessliches Unikat.',
         promoCTA: 'Jetzt mit Rabatt bestellen',
+
         // Контакты
         contactHeading: 'Kontakt',
         contactAddress: 'Adresse:',
@@ -49,144 +113,309 @@ const translations = {
         footerNote: 'Amarte Design Studio startet offiziell im Januar 2026 – aber wir möchten euch schon jetzt überraschen!',
         footer: '© 2025 Amarte Design Studio. Alle Rechte vorbehalten.',
     },
-    // ------------------- РУССКИЙ (RU) -------------------
+
+    // ------------------- РУССКИЙ (RU) - ЗАКОММЕНТИРОВАН -------------------
+    /*
     ru: {
-        // Заголовок
         pageTitle: 'Amarte Design Studio — Искусство, которое трогает сердца',
-        // Навигация
-        navHome: 'Главная', // НОВЫЙ КЛЮЧ
+
+        navHome: 'Главная',
         navAbout: 'О нас',
         navServices: 'Услуги',
-        navGallery: 'Галерея', 
+        navGallery: 'Галерея',
         navPromo: 'Акция',
         navContact: 'Контакты',
-        // Герой
+
         heroHeading: 'Искусство, Которое Идет От Сердца.',
         heroSub: '„Не каждому подарку нужен блеск. Некоторым нужно просто Сердце.“ ✨',
         heroCTA: 'Заказать Ваш Персональный Подарок',
-        // О нас
+
         aboutHeading: 'Наша Философия',
         aboutIntro: 'Мы верим: Подарок — это больше, чем просто предмет; это чувство, которое остается.',
-        aboutText: '<strong>Amarte Design Studio</strong> — ваш партнер в создании уникальных и эмоциональных произведений искусства. Мы трансформируем ваши идеи в рукотворные шедевры, которые рассказывают вашу историю. Каждый дизайн **разрабатывается и завершается лично художником**, что гарантирует высочайшее качество и абсолютную индивидуальность. Наша миссия — создавать искусство, которое трогает сердца. Мы фокусируемся на деталях и индивидуальной ручной работе.',
-        // Услуги
+        aboutText: '<strong>Amarte Design Studio</strong> — ваш партнёр в создании уникальных и эмоциональных произведений искусства. Мы превращаем ваши идеи в рукотворные работы, которые рассказывают историю. Каждый дизайн разрабатывается и завершается лично художником, что гарантирует качество и индивидуальность.',
+        
+        // НОВЫЕ КЛЮЧИ ДЛЯ ЦЕНТРАЛЬНОГО БЛОКА МИССИИ
+        missionHeading: 'Ваше Желание — Наше Сырье.',
+        missionText1: 'Мир жаждет <strong>Подлинности</strong>. Подарков, сделанных не на конвейере, а пришедших прямо из сердца. Здесь начинается магия Amarte.',
+        missionText2: 'Мы видим не объекты, а чистые холсты. Будь то бумага визитки, керамика кружки, поверхность двери, пустая стена или цифровой портрет — каждый предмет, к которому прикасается рука нашего художника, превращается в <strong>личное произведение искусства</strong>.',
+        missionText3: 'Мы — Amarte: Сердце для искусства, Разум для технологий. Вместе мы заполняем пустые пространства вашего мира <strong>эмоциями и воспоминаниями</strong>.',
+
         servicesHeading: 'Наш Спектр Услуг',
+        servicesTagline: 'От маленьких, душевных деталей до продуманного фирменного стиля — мы создаём искусство, которое трогает сердце.',
+
         service1Title: 'Подарки Ручной Работы',
-        service1Text: 'Подарки для особых случаев, пробуждающие эмоции. От персонализированных кружек, открыток до индивидуальных деревянных изделий и украшений.',
+        service1Text: 'Подарки для особых случаев, пробуждающие эмоции.',
+        service1Ex1: 'Персонализированные кружки и бокалы',
+        service1Ex2: 'Открытки и поздравительные карточки',
+        service1Ex3: 'Деревянные изделия с именем или датой',
+        service1Ex4: 'Декор для дома',
+
         service2Title: 'Портреты и Арт-работы',
-        service2Text: 'Создайте незабываемый портрет (цифровой или традиционный) людей, пар или домашних животных. Искусство как выражение вашей личности и память.',
+        service2Text: 'Портреты людей, пар и домашних животных.',
+        service2Ex1: 'Портреты семей и пар',
+        service2Ex2: 'Портреты домашних животных',
+        service2Ex3: 'Иллюстрации по фотографии',
+        service2Ex4: 'Цифровые арт-работы',
+
         service3Title: 'Закладки и Мелкое Искусство',
-        service3Text: 'Маленький, но изысканный подарок или элегантный аксессуар для себя. Качественные, расписанные вручную закладки, календари и другие индивидуальные предметы малого искусства.',
+        service3Text: 'Небольшие, но особенные произведения искусства.',
+        service3Ex1: 'Ручные закладки',
+        service3Ex2: 'Мини-картины',
+        service3Ex3: 'Календари с иллюстрациями',
+        service3Ex4: 'Подарки для любителей книг',
+
         service4Title: 'Графика и Корпоративный Дизайн',
-        service4Text: 'Разработка вашего фирменного логотипа, визиток, флаеров и рекламных баннеров. Мы дадим вашему бренду визуальное сердце и индивидуальность.',
-        servicesGuarantee: '⭐ Мы превращаем ваши желания и идеи в уникальную, ручную реальность!',
-        // Галерея
-        galleryHeading: 'Наши Произведения Искусства', 
-        galleryIntro: 'Посмотрите на наши уникальные изделия и портреты ручной работы. Нажмите на изображение, чтобы увидеть его в полном размере.', 
-        galleryGuarantee: 'Все работы сделаны вручную и уникальны.', 
-        // Акция
+        service4Text: 'Логотипы, визитки и рекламные материалы.',
+        service4Ex1: 'Разработка логотипа',
+        service4Ex2: 'Визитки и флаеры',
+        service4Ex3: 'Графика для социальных сетей',
+        service4Ex4: 'Простой бренд-гайд (цвета, шрифты)',
+
+        servicesGuarantee: '⭐ Мы превращаем ваши желания в уникальную, ручную реальность!',
+
+        servicesForWhomTitle: 'Для кого Amarte Design Studio?',
+        servicesForWhomText: 'Для тех, кто не хочет дарить «что-нибудь», а ищет по-настоящему личный и тёплый подарок.',
+        servicesForWhom1: 'Пары и семьи',
+        servicesForWhom2: 'Друзья и близкие',
+        servicesForWhom3: 'Небольшие компании и самозанятые',
+        servicesForWhom4: 'Любители искусства и деталей',
+
+        servicesOccasionsTitle: 'Поводы и особенные моменты',
+        servicesOccasionsText: 'Наши работы часто создаются для важных и трогательных моментов:',
+        servicesOcc1: 'Дни рождения и свадьбы',
+        servicesOcc2: 'Крестины и юбилеи',
+        servicesOcc3: 'Переезды, прощания и новые начала',
+        servicesOcc4: '«Просто так» — чтобы сказать спасибо 💛',
+
+        servicesProcessTitle: 'Как проходит заказ?',
+        servicesStep1: 'Контакт: вы пишете нам свою идею.',
+        servicesStep2: 'Обсуждение: стиль, цвета, формат, бюджет.',
+        servicesStep3: 'Эскиз: вы получаете предварительный вариант.',
+        servicesStep4: 'Завершение: работа аккуратно доводится до идеала.',
+        servicesStep5: 'Передача: самовывоз или отправка готовой работы.',
+
+        galleryHeading: 'Наши Произведения Искусства',
+        galleryIntro: 'Посмотрите на наши уникальные изделия и портреты ручной работы. Каждый клик открывает историю.',
+        galleryViewDetails: 'Показать детали',
+
+        // КЛЮЧИ ДЛЯ ФИЛЬТРОВ И МОДАЛЬНОГО ОКНА
+        filterAll: 'Все', filterPortraits: 'Портреты', filterGifts: 'Подарки', filterDesign: 'Дизайн',
+        categoryPortraits: 'Портретное Искусство', categoryGifts: 'Уникальный Подарок', categoryDesign: 'Графический Дизайн',
+
         promoHeading: 'Ваш Рождественский Подарок от нас!',
-        promoDiscount: 'Получите **10% Скидку** на Ваш заказ!',
-        promoText: 'Закажите сейчас ваш личный подарок и позаботьтесь о себе и всех, кого вы любите, с помощью незабываемого уникального изделия.',
-        promoCTA: 'Заказать со Скидкой',
-        // Контакты
+        promoDiscount: 'Получите <strong>10% скидку</strong> на ваш заказ!',
+        promoText: 'Закажите сейчас ваш личный подарок.',
+        promoCTA: 'Заказать со скидкой',
+
         contactHeading: 'Контакты',
         contactAddress: 'Адрес:',
         contactEmail: 'E-Mail:',
-        footerNote: 'Amarte Design Studio официально начинает работу в январе 2026 года – но мы будем рады удивить вас уже сейчас!',
+        footerNote: 'Amarte Design Studio официально начинает работу в январе 2026 года.',
         footer: '© 2025 Amarte Design Studio. Все права защищены.',
     },
-    // ------------------- АНГЛИЙСКИЙ (EN) -------------------
+    */
+
+    // ------------------- АНГЛИЙСКИЙ (EN) - ЗАКОММЕНТИРОВАН -------------------
+    /*
     en: {
-        // Заголовок
         pageTitle: 'Amarte Design Studio — Art that touches the heart',
-        // Навигация
-        navHome: 'Home', // НОВЫЙ КЛЮЧ
+
+        navHome: 'Home',
         navAbout: 'About Us',
         navServices: 'Services',
         navGallery: 'Gallery',
         navPromo: 'Promo',
         navContact: 'Contact',
-        // Герой
+
         heroHeading: 'Art that comes from the heart.',
-        heroSub: '“Not every gift needs glitter. Some just need a heart.” ✨',
+        heroSub: '“Not every gift needs glitter. Some just needs a heart.” ✨',
         heroCTA: 'Order your personalized gift now',
-        // О нас
+
         aboutHeading: 'Our Philosophy',
         aboutIntro: 'We believe: A gift is more than just an object—it is a feeling that lasts.',
-        aboutText: '<strong>Amarte Design Studio</strong> is your partner for unique and soulful artwork. We transform your wishes into handcrafted unique pieces that tell a story. **Every design is personally developed** and completed by the artist, guaranteeing the highest quality and absolute individuality. We stand for art that comes from the heart and touches hearts. Our focus is on detailed, individual handiwork.',
-        // Услуги
+        aboutText: '<strong>Amarte Design Studio</strong> is your partner for unique and soulful artwork.',
+        
+        // НОВЫЕ КЛЮЧИ ДЛЯ ЦЕНТРАЛЬНОГО БЛОКА МИССИИ
+        missionHeading: 'Your Wish Is Our Raw Material.',
+        missionText1: 'The world craves <strong>Authenticity</strong>. For gifts that are not off-the-shelf but come directly from the heart. This is where the magic of Amarte begins.',
+        missionText2: 'We see not objects, but blank canvases. Whether it\'s business card paper, the ceramic of a mug, the surface of a door, an empty wall, or a digital portrait—every object touched by our artist\'s hand transforms into a <strong>personal masterpiece</strong>.',
+        missionText3: 'We are Amarte: The Heart for Art, the Mind for Tech. Together, we fill the empty spaces of your world with <strong>emotions and memories</strong>.',
+
         servicesHeading: 'Our Service Portfolio',
+        servicesTagline: 'From small, heartfelt details to thoughtful corporate design – we create art that feels personal and unique.',
+
         service1Title: 'Handcrafted Unique Pieces',
-        service1Text: 'Gifts for special occasions that evoke emotions. From personalized mugs, postcards to individual wooden items and jewelry.',
+        service1Text: 'Gifts for special occasions that evoke emotions.',
+        service1Ex1: 'Personalized mugs & glasses',
+        service1Ex2: 'Custom postcards & greeting cards',
+        service1Ex3: 'Wooden items with names or dates',
+        service1Ex4: 'Decor pieces for your home',
+
         service2Title: 'Portraits & Artworks',
-        service2Text: 'Create an unforgettable portrait (digital or traditional) of people, couples, or pets. Art as an expression of your personality and memory.',
+        service2Text: 'Portraits of people, couples & pets.',
+        service2Ex1: 'Portraits of families & couples',
+        service2Ex2: 'Pet portraits',
+        service2Ex3: 'Illustrations based on photos',
+        service2Ex4: 'Digital artworks',
+
         service3Title: 'Bookmarks & Small Art',
-        service3Text: 'A small but fine gift or an elegant accessory for yourself. High-quality, hand-painted bookmarks, calendars, or other individual small artworks.',
+        service3Text: 'Small artworks that bring joy.',
+        service3Ex1: 'Hand-painted bookmarks',
+        service3Ex2: 'Mini art pieces',
+        service3Ex3: 'Illustrated calendars',
+        service3Ex4: 'Gifts for book lovers',
+
         service4Title: 'Graphic & Corporate Design',
-        service4Text: 'Development of your company logo, business cards, flyers, and advertising banners. We give your brand a visual heart and an individual identity.',
-        servicesGuarantee: '⭐ We transform your wishes and ideas into unique, handmade reality!',
-        // Галерея
-        galleryHeading: 'Our Artworks', 
-        galleryIntro: 'Discover a selection of our handcrafted unique pieces and portraits. Click on an image to see it in full size.', 
-        galleryGuarantee: 'All works are handcrafted and unique.', 
-        // Акция
+        service4Text: 'Logos, business cards & marketing material.',
+        service4Ex1: 'Logo design',
+        service4Ex2: 'Business cards & flyers',
+        service4Ex3: 'Social media graphics',
+        service4Ex4: 'Simple brand guides (colors, fonts)',
+
+        servicesGuarantee: '⭐ We transform your wishes into handmade reality!',
+
+        servicesForWhomTitle: 'Who is Amarte Design Studio for?',
+        servicesForWhomText: 'For people who do not want to gift “just something”, but something truly personal and heartfelt.',
+        servicesForWhom1: 'Couples & families',
+        servicesForWhom2: 'Friends & loved ones',
+        servicesForWhom3: 'Small businesses & freelancers',
+        servicesForWhom4: 'Art and detail lovers',
+
+        servicesOccasionsTitle: 'Occasions & special moments',
+        servicesOccasionsText: 'Most of our works are created for emotional and memorable moments:',
+        servicesOcc1: 'Birthdays & weddings',
+        servicesOcc2: 'Baptisms & anniversaries',
+        servicesOcc3: 'New beginnings & farewells',
+        servicesOcc4: '"Just because" – to say thank you 💛',
+
+        servicesProcessTitle: 'How does an order work?',
+        servicesStep1: 'Contact: You send us your idea.',
+        servicesStep2: 'Discussion: Style, colors, format & budget.',
+        servicesStep3: 'Draft: You receive a first sketch.',
+        servicesStep4: 'Finalization: The artwork is carefully completed.',
+        servicesStep5: 'Delivery: Pickup or shipping of the finished piece.',
+
+        galleryHeading: 'Our Artworks',
+        galleryIntro: 'Explore our gallery of handcrafted pieces and portraits. Every click opens a story.',
+        galleryViewDetails: 'Show Details',
+
+        // КЛЮЧИ ДЛЯ ФИЛЬТРОВ И МОДАЛЬНОГО ОКНА
+        filterAll: 'All', filterPortraits: 'Portraits', filterGifts: 'Gifts', filterDesign: 'Design',
+        categoryPortraits: 'Portrait Art', categoryGifts: 'Unique Gift', categoryDesign: 'Graphic Design',
+
         promoHeading: 'Your Christmas gift from us!',
-        promoDiscount: 'Secure a **10% discount** on your order!',
-        promoText: 'Order your personal gift now and ensure an unforgettable unique piece for yourself and all those you love.',
-        promoCTA: 'Order with discount now',
-        // Контакты
+        promoDiscount: 'Secure a <strong>10% discount</strong> on your order!',
+        promoText: 'Order your personal gift now.',
+        promoCTA: 'Order now',
+
         contactHeading: 'Contact',
         contactAddress: 'Address:',
         contactEmail: 'E-Mail:',
-        footerNote: 'Amarte Design Studio officially launches in January 2026 – but we\'d love to surprise you now!',
+        footerNote: 'Amarte Design Studio launches in January 2026.',
         footer: '© 2025 Amarte Design Studio. All rights reserved.',
     },
-    // ------------------- ГОЛЛАНДСКИЙ (NL) -------------------
+    */
+
+    // ------------------- ГОЛЛАНДСКИЙ (NL) - ЗАКОММЕНТИРОВАН -------------------
+    /*
     nl: {
-        // Заголовок
         pageTitle: 'Amarte Design Studio — Kunst die het hart raakt',
-        // Навигация
-        navHome: 'Startpagina', // НОВЫЙ КЛЮЧ
+
+        navHome: 'Startpagina',
         navAbout: 'Over Ons',
         navServices: 'Diensten',
-        navGallery: 'Galerij', 
+        navGallery: 'Galerij',
         navPromo: 'Actie',
         navContact: 'Contact',
-        // Герой
+
         heroHeading: 'Kunst die uit het hart komt.',
         heroSub: '“Niet elk cadeau heeft glitter nodig. Sommige hebben gewoon een hart nodig.” ✨',
         heroCTA: 'Bestel nu uw persoonlijke geschenk',
-        // О нас
+
         aboutHeading: 'Onze Filosofie',
-        aboutIntro: 'Wij geloven: Een geschenk is meer dan alleen een object—het is een gevoel dat blijft.',
-        aboutText: '<strong>Amarte Design Studio</strong> is uw partner voor unieke en gevoelige kunstwerken. Wij transformeren uw wensen in handgemaakte unieke stukken die een verhaal vertellen. **Elk ontwerp wordt persoonlijk ontwikkeld** en voltooid door de kunstenaar, wat de hoogste kwaliteit en absolute individualiteit garandeert. Wij staan voor kunst die uit het hart komt en harten raakt. Onze focus ligt op gedetailleerd, individueel handwerk.',
-        // Услуги
+        aboutIntro: 'Wij geloven: een geschenk is meer dan een object — het is een gevoel dat blijft.',
+        aboutText: '<strong>Amarte Design Studio</strong> maakt unieke en gevoelige kunstwerken.',
+        
+        // НОВЫЕ КЛЮЧИ ДЛЯ ЦЕНТРАЛЬНОГО БЛОКА МИССИИ
+        missionHeading: 'Uw Wens Is Onze Grondstof.',
+        missionText1: 'De wereld verlangt naar <strong>Authenticiteit</strong>. Naar geschenken die niet van de band rollen, maar recht uit het hart komen. Hier begint de magie van Amarte.',
+        missionText2: 'Wij zien geen objecten, maar lege doeken. Of het nu het papier van een visitekaartje is, het keramiek van een mok, het oppervlak van een deur, een lege muur of een digitaal portret – elk object dat onze kunstenaar aanraakt, verandert in een <strong>persoonlijk meesterwerk</strong>.',
+        missionText3: 'Wij zijn Amarte: Het Hart voor Kunst, het Verstand voor Techniek. Samen vullen we de lege ruimtes van uw wereld met <strong>emoties en herinneringen</strong>.',
+
         servicesHeading: 'Ons Dienstenpakket',
+        servicesTagline: 'Van kleine, liefdevolle details tot doordacht corporate design – wij creëren kunst die persoonlijk en uniek voelt.',
+
         service1Title: 'Handgemaakte Unieke Stukken',
-        service1Text: 'Geschenken voor speciale gelegenheden die emoties oproepen. Van gepersonaliseerde mokken, ansichtkaarten tot individuele houten items en sieraden.',
+        service1Text: 'Geschenken voor speciale gelegenheden.',
+        service1Ex1: 'Gepersonaliseerde mokken & glazen',
+        service1Ex2: 'Unieke kaarten & wenskaarten',
+        service1Ex3: 'Houten items met naam of datum',
+        service1Ex4: 'Decoratie voor thuis',
+
         service2Title: 'Portretten & Kunstwerken',
-        service2Text: 'Creëer een onvergetelijk portret (digitaal of traditioneel) van mensen, koppels of huisdieren. Kunst als uitdrukking van uw persoonlijkheid en herinnering.',
+        service2Text: 'Portretten van mensen, koppels & huisdieren.',
+        service2Ex1: 'Portretten van families & koppels',
+        service2Ex2: 'Huisdierportretten',
+        service2Ex3: 'Illustraties naar foto',
+        service2Ex4: 'Digitale artworks',
+
         service3Title: 'Boekenleggers & Kleine Kunst',
-        service3Text: 'Een klein maar fijn geschenk of een elegant accessoire voor uzelf. Hoogwaardige, handgeschilderde boekenleggers, kalenders of andere individuele kleine kunstwerken.',
+        service3Text: 'Kleine kunstwerken die vreugde brengen.',
+        service3Ex1: 'Handgeschilderde boekenleggers',
+        service3Ex2: 'Mini-kunstwerken',
+        service3Ex3: 'Kalenders met illustraties',
+        service3Ex4: 'Cadeaus voor boekenliefhebbers',
+
         service4Title: 'Grafisch & Corporate Design',
-        service4Text: 'Ontwikkeling van uw bedrijfslogo, visitekaartjes, flyers en reclamebanners. Wij geven uw merk een visueel hart en een individuele identiteit.',
-        servicesGuarantee: '⭐ We zetten uw wensen en ideeën om in unieke, handgemaakte realiteit!',
-        // Галерея
-        galleryHeading: 'Onze Kunstwerken', 
-        galleryIntro: 'Ontdek een selectie van onze handgemaakte unieke stukken en portretten. Klik op een afbeelding om deze op volledige grootte te bekijken.', 
-        galleryGuarantee: 'Alle werken zijn handgemaakt en uniek.', 
-        // Акция
+        service4Text: 'Logo’s, visitekaartjes & promomateriaal.',
+        service4Ex1: 'Logo-ontwerp',
+        service4Ex2: 'Visitekaartjes & flyers',
+        service4Ex3: 'Social media graphics',
+        service4Ex4: 'Eenvoudige brandgids (kleuren, fonts)',
+
+        servicesGuarantee: '⭐ We zetten uw wensen om in unieke, handgemaakte realiteit!',
+
+        servicesForWhomTitle: 'Voor wie is Amarte Design Studio?',
+        servicesForWhomText: 'Voor mensen die geen “zomaar iets” willen geven, maar een persoonlijk en hartelijk geschenk.',
+        servicesForWhom1: 'Koppels & gezinnen',
+        servicesForWhom2: 'Vrienden & familie',
+        servicesForWhom3: 'Zelfstandigen & kleine bedrijven',
+        servicesForWhom4: 'Liefhebbers van kunst & details',
+
+        servicesOccasionsTitle: 'Gelegenheden & bijzondere momenten',
+        servicesOccasionsText: 'Veel van onze opdrachten ontstaan rond emotionele momenten:',
+        servicesOcc1: 'Verjaardagen & bruiloften',
+        servicesOcc2: 'Doop & jubilea',
+        servicesOcc3: 'Nieuwe starts & afscheid',
+        servicesOcc4: 'Gewoon zomaar – om bedankt te zeggen 💛',
+
+        servicesProcessTitle: 'Hoe verloopt een bestelling?',
+        servicesStep1: 'Contact: u stuurt ons uw idee.',
+        servicesStep2: 'Afstemming: stijl, kleuren, formaat & budget.',
+        servicesStep3: 'Ontwerp: u ontvangt een eerste schets.',
+        servicesStep4: 'Finalisering: het kunstwerk wordt afgewerkt.',
+        servicesStep5: 'Overdracht: ophalen of verzending.',
+
+        galleryHeading: 'Onze Kunstwerken',
+        galleryIntro: 'Bekijk een selectie van onze handgemaakte werken. Elke klik opent een verhaal.',
+        galleryViewDetails: 'Toon Details',
+
+        // КЛЮЧИ ДЛЯ ФИЛЬТРОВ И МОДАЛЬНОГО ОКНА
+        filterAll: 'Alle', filterPortraits: 'Portretten', filterGifts: 'Geschenken', filterDesign: 'Design',
+        categoryPortraits: 'Portretkunst', categoryGifts: 'Uniek Geschenk', categoryDesign: 'Grafisch Ontwerp',
+
         promoHeading: 'Uw Kerstgeschenk van ons!',
-        promoDiscount: 'Ontvang **10% korting** op uw bestelling!',
-        promoText: 'Bestel nu uw persoonlijke geschenk en zorg voor een onvergetelijk uniek stuk voor uzelf en al uw dierbaren.',
-        promoCTA: 'Bestel nu met korting',
-        // Контакты
+        promoDiscount: 'Ontvang <strong>10% korting</strong> op uw bestelling!',
+        promoText: 'Bestel nu uw persoonlijke geschenk.',
+        promoCTA: 'Bestel met korting',
+
         contactHeading: 'Contact',
         contactAddress: 'Adres:',
         contactEmail: 'E-mail:',
-        footerNote: 'Amarte Design Studio lanceert officieel in januari 2026 – maar we willen u nu al verrassen!',
+        footerNote: 'Amarte Design Studio lanceert officieel in januari 2026.',
         footer: '© 2025 Amarte Design Studio. Alle rechten voorbehouden.',
     },
+    */
 };
 
 
@@ -194,62 +423,83 @@ const translations = {
 // 2. ФУНКЦИИ ПЕРЕКЛЮЧЕНИЯ ЯЗЫКА
 // ====================================
 
-/**
- * Применяет переводы к элементам на странице на основе data-key.
- * @param {string} lang - Код языка ('de', 'ru', 'en', 'nl').
- */
 function applyTranslations(lang) {
+    // Временно жестко устанавливаем DE, если запрашиваемый язык не существует
+    const effectiveLang = translations[lang] ? lang : 'de'; 
+    const currentTranslations = translations[effectiveLang] || translations['de'];
+    
     document.querySelectorAll('[data-key]').forEach(element => {
         const key = element.getAttribute('data-key');
-        let translation = translations[lang][key];
+        let translation = currentTranslations[key] || '';
 
-        // Используем innerHTML для текста, содержащего форматирование (жирный, ссылки, и т.д.)
-        if (key === 'promoDiscount' || key === 'aboutText' || key === 'footer' || key === 'footerNote') {
+        // Используем .innerHTML для ключей, содержащих HTML или переводы миссии
+        if (key === 'promoDiscount' || key === 'aboutText' || key === 'footer' || key === 'footerNote' || key.startsWith('missionText')) {
             element.innerHTML = translation;
         } else if (element.tagName === 'A' && element.classList.contains('cta-button')) {
-            // Для CTA-кнопок используем textContent
             element.textContent = translation;
         } else {
-            // Для всех остальных используем textContent
             element.textContent = translation;
         }
     });
 
-    // Изменение атрибута lang у <html> и заголовка страницы
-    document.documentElement.lang = lang;
-    document.title = translations[lang].pageTitle;
+    // Обновление текста фильтров галереи (они не используют data-key)
+    const filterAllBtn = document.querySelector('.filter-buttons [data-filter="all"]');
+    const filterPortraitsBtn = document.querySelector('.filter-buttons [data-filter="portraits"]');
+    const filterGiftsBtn = document.querySelector('.filter-buttons [data-filter="gifts"]');
+    const filterDesignBtn = document.querySelector('.filter-buttons [data-filter="design"]');
+
+    if (filterAllBtn) filterAllBtn.textContent = currentTranslations.filterAll;
+    if (filterPortraitsBtn) filterPortraitsBtn.textContent = currentTranslations.filterPortraits;
+    if (filterGiftsBtn) filterGiftsBtn.textContent = currentTranslations.filterGifts;
+    if (filterDesignBtn) filterDesignBtn.textContent = currentTranslations.filterDesign;
+
+    document.documentElement.lang = effectiveLang;
+    document.title = currentTranslations.pageTitle;
 }
 
-/**
- * Устанавливает выбранный язык, обновляет кнопки и сохраняет выбор.
- * @param {string} lang - Код языка ('de', 'ru', 'en', 'nl').
- */
 function setLanguage(lang) {
-    applyTranslations(lang);
-    
-    // Обновление активного класса для кнопок
+    // Временно жестко устанавливаем DE, пока другие языки отключены
+    const effectiveLang = 'de'; 
+
+    applyTranslations(effectiveLang);
+
+    // Удаляем классы 'active' со всех кнопок
     document.querySelectorAll('.lang-button').forEach(btn => {
         btn.classList.remove('active');
     });
-    document.querySelector(`#lang-${lang}`).classList.add('active');
 
-    // Сохранение в локальном хранилище
-    localStorage.setItem('websiteLang', lang);
+    // Добавляем класс 'active' только на кнопку DE
+    const activeBtn = document.querySelector(`#lang-de`);
+    if (activeBtn) {
+        activeBtn.classList.add('active');
+    }
+
+    // Сохранение языка в localStorage можно временно оставить DE
+    localStorage.setItem('websiteLang', 'de');
 }
 
 
 // ====================================
-// 3. ФУНКЦИЯ ДИНАМИЧЕСКОГО ФОНА
+// 3. SLIDER HERO
 // ====================================
 
-/**
- * Запускает циклическое переключение фоновых изображений в секции Hero.
- */
+let heroSliderTimer = null;
+
 function startHeroImageSlider() {
     const images = document.querySelectorAll('.hero-bg-item');
-    if (images.length <= 1) return; 
-    
-    let currentIndex = 0;
+    if (!images || images.length === 0) return;
+
+    const hasActive = Array.from(images).some(img => img.classList.contains('active'));
+    if (!hasActive) {
+        images[0].classList.add('active');
+    }
+
+    if (images.length === 1) return;
+
+    if (heroSliderTimer) clearInterval(heroSliderTimer);
+
+    let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+    if (currentIndex < 0) currentIndex = 0;
 
     function nextImage() {
         images[currentIndex].classList.remove('active');
@@ -257,118 +507,187 @@ function startHeroImageSlider() {
         images[currentIndex].classList.add('active');
     }
 
-    setInterval(nextImage, 5000); 
+    heroSliderTimer = setInterval(nextImage, 5000);
 }
 
 
 // ====================================
-// 4. ЛОГИКА ГАЛЕРЕИ (Модальное окно)
+// 4. ГАЛЕРЕЯ (С ФИЛЬТРАМИ И КАТЕГОРИЯМИ)
 // ====================================
 
 function initGallery() {
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
     const captionText = document.getElementById('caption');
+    const categorySpan = document.querySelector('.art-category');
     const closeBtn = document.getElementById('closeModal');
     const prevBtn = document.getElementById('prevButton');
     const nextBtn = document.getElementById('nextButton');
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+    const filterButtons = document.querySelectorAll('.filter-btn');
 
-    if (!modal || galleryItems.length === 0) return; // Выход, если элементов нет
+    if (!modal || galleryItems.length === 0) return;
 
+    let currentFilteredItems = galleryItems;
     let currentIndex = 0;
+    // Используем 'de', так как другие языки отключены
+    let currentLang = 'de'; 
 
-    // Функция для показа изображения в модальном окне
+
+    // Получение перевода категории
+    const getCategoryTranslation = (category, lang) => {
+        const key = 'category' + category.charAt(0).toUpperCase() + category.slice(1);
+        // Всегда ищем в DE, так как другие языки отключены
+        return translations['de'][key] || category; 
+    };
+    
+    // --- ФУНКЦИЯ ПРОСМОТРА КАРТИНКИ ---
     const showImage = (index) => {
+        // Проверяем, что есть отфильтрованные элементы
+        if (currentFilteredItems.length === 0) return;
+        
         if (index < 0) {
-            currentIndex = galleryItems.length - 1;
-        } else if (index >= galleryItems.length) {
+            currentIndex = currentFilteredItems.length - 1;
+        } else if (index >= currentFilteredItems.length) {
             currentIndex = 0;
         } else {
             currentIndex = index;
         }
 
-        const currentItem = galleryItems[currentIndex];
+        const currentItem = currentFilteredItems[currentIndex];
+        const fullSrc = currentItem.getAttribute('data-full');
+        const title = currentItem.getAttribute('data-title');
+        const category = currentItem.getAttribute('data-category');
+
         modal.style.display = "block";
-        modalImg.src = currentItem.getAttribute('data-full'); // Используем большое изображение
-        captionText.innerHTML = currentItem.alt;
+        modalImg.src = fullSrc;
+        captionText.textContent = title;
+        
+        // Установка категории с переводом
+        currentLang = 'de'; // Язык жестко установлен на DE
+        categorySpan.textContent = getCategoryTranslation(category, currentLang);
     };
 
-    // Открытие модального окна при клике на превью
-    galleryItems.forEach((item, index) => {
+    // --- ФУНКЦИЯ ФИЛЬТРАЦИИ ---
+    const filterGallery = (filter) => {
+        currentFilteredItems = galleryItems.filter(item => 
+            filter === 'all' || item.getAttribute('data-category') === filter
+        );
+
+        galleryItems.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                // Плавное появление (для Masonry grid)
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+        
+        // Сброс индекса после фильтрации
+        currentIndex = 0; 
+    };
+    
+    // --- ОБРАБОТЧИКИ КЛИКОВ ---
+    
+    // 1. Клики по фильтрам
+    filterButtons.forEach(btn => {
+        btn.onclick = () => {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterGallery(btn.getAttribute('data-filter'));
+        };
+    });
+    
+    // 2. Клики по элементам галереи
+    galleryItems.forEach((item) => {
         item.onclick = function() {
-            showImage(index);
+            // Находим индекс в текущем отфильтрованном списке
+            const filteredIndex = currentFilteredItems.indexOf(item);
+            if (filteredIndex !== -1) {
+                showImage(filteredIndex);
+            }
         };
     });
 
-    // Закрытие модального окна
-    closeBtn.onclick = function() {
-        modal.style.display = "none";
-    };
-
-    // Переход к предыдущему/следующему
+    // 3. Управление модальным окном
+    closeBtn.onclick = () => modal.style.display = "none";
     prevBtn.onclick = () => showImage(currentIndex - 1);
     nextBtn.onclick = () => showImage(currentIndex + 1);
 
-    // Закрытие по клику вне картинки (на черном фоне)
     window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+        if (event.target == modal) modal.style.display = "none";
+    };
+
+    document.onkeydown = function(e) {
+        if (modal.style.display === "block") {
+            if (e.key === "Escape") modal.style.display = "none";
+            if (e.key === "ArrowLeft") showImage(currentIndex - 1);
+            if (e.key === "ArrowRight") showImage(currentIndex + 1);
         }
     };
     
-    // Закрытие по клавише ESC и навигация стрелками
-    document.onkeydown = function(e) {
-        e = e || window.event;
-        if (modal.style.display === "block") {
-            if (e.key === "Escape" || e.key === "Esc") {
-                modal.style.display = "none";
-            } else if (e.key === "ArrowLeft") {
-                showImage(currentIndex - 1);
-            } else if (e.key === "ArrowRight") {
-                showImage(currentIndex + 1);
-            }
-        }
-    };
+    // Инициализация фильтра по умолчанию
+    filterGallery('all');
 }
 
 
 // ====================================
-// 5. ИНИЦИАЛИЗАЦИЯ ПРИ ЗАГРУЗКЕ СТРАНИЦЫ
+// 5. INIT
 // ====================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // --- 5.1. Автоматическое присвоение data-key к элементам без них ---
-    // Это нужно, чтобы переводы применялись ко всем элементам, которые мы не могли разметить в HTML
+
+    // Добавляем data-key для элементов в секции контактов/футера
     if (document.querySelector('.contact-details p:nth-child(1) strong')) {
         document.querySelector('.contact-details p:nth-child(1) strong').setAttribute('data-key', 'contactAddress');
         document.querySelector('.contact-details p:nth-child(2) strong').setAttribute('data-key', 'contactEmail');
     }
-    
+
     if (document.querySelector('footer .container')) {
         document.querySelector('footer .container').setAttribute('data-key', 'footer');
     }
-    
+
     if (document.querySelector('.footer-note')) {
         document.querySelector('.footer-note').setAttribute('data-key', 'footerNote');
     }
 
-    // --- 5.2. Инициализация языка ---
-    const defaultLang = localStorage.getItem('websiteLang') || 'de';
-    setLanguage(defaultLang);
-    
-    // --- 5.3. Добавление слушателей событий для кнопок языка ---
+    // Установка языка. Всегда используем DE.
+    // const defaultLang = localStorage.getItem('websiteLang') || 'de'; // ЗАКОММЕНТИРОВАНО
+    setLanguage('de'); // Жестко устанавливаем DE
+
+    // ЗАКОММЕНТИРОВАН ОБРАБОТЧИК КНОПОК ПЕРЕКЛЮЧЕНИЯ ЯЗЫКА
+    /*
     document.querySelectorAll('.lang-button').forEach(button => {
         button.addEventListener('click', (event) => {
             const lang = event.target.getAttribute('data-lang');
             setLanguage(lang);
+            // Перезапуск галереи для обновления текущего языка и фильтров
+            if (document.getElementById('artwork-grid')) {
+                initGallery(); 
+            }
         });
     });
+    */
 
-    // --- 5.4. Запуск слайдера фоновых изображений ---
     startHeroImageSlider();
     
-    // --- 5.5. Инициализация Галереи ---
-    initGallery();
+    // Инициализация галереи только на странице галереи
+    if (document.getElementById('artwork-grid')) {
+        initGallery(); 
+    }
 });
+
+// WOW-анимация для 3 блоков (Für wen, Anlässe, Prozess)
+const highlightBlocks = document.querySelectorAll('.services-extra-block');
+
+function revealBlocks() {
+    highlightBlocks.forEach(block => {
+        const rect = block.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 80) {
+            block.classList.add('show');
+        }
+    });
+}
+
+window.addEventListener('scroll', revealBlocks);
+window.addEventListener('load', revealBlocks);

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amarte Design Studio — Kontakt</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Стили и шрифты -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <div class="logo">
+            <img src="assets/media/logo.png" alt="Amarte Design Studio Logo" class="logo-img">
+        </div>
+        <nav>
+            <a href="index.html" data-key="navHome">Startseite</a>
+            <a href="about.html" data-key="navAbout">Über Uns</a>
+            <a href="services.html" data-key="navServices">Leistungen</a>
+            <a href="gallery.html" data-key="navGallery">Galerie</a>
+            <a href="promo.html" data-key="navPromo">Aktion</a>
+            <a href="contact.html" data-key="navContact">Kontakt</a>
+        </nav>
+        <!-- <div class="language-switcher">
+            <button id="lang-de" class="lang-button active" data-lang="de">DE</button>
+            <button id="lang-en" class="lang-button" data-lang="en">EN</button>
+            <button id="lang-nl" class="lang-button" data-lang="nl">NL</button>
+            <button id="lang-ru" class="lang-button" data-lang="ru">RU</button>
+        </div> -->
+    </div>
+</header>
+
+<!-- Можно без hero-блока, чтобы страница была компактной -->
+
+<section class="contact-section">
+    <div class="container">
+        <h2 data-key="contactHeading">
+            <i class="fas fa-envelope"></i> Kontakt
+        </h2>
+
+        <!-- Небольшой текст-интро только на немецком (без data-key, чтобы не трогать JS) -->
+        <p class="intro-text">
+            Sie möchten ein persönliches Geschenk bestellen oder haben Fragen?
+            Schreiben Sie uns – wir melden uns so schnell wie möglich.
+        </p>
+
+        <div class="contact-details">
+            <p>
+                <i class="fas fa-map-marker-alt"></i>
+                <strong data-key="contactAddress">Adresse:</strong>
+                Wesel 46485
+            </p>
+            <p>
+                <i class="fas fa-at"></i>
+                <strong data-key="contactEmail">E-Mail:</strong>
+                <a href="mailto:amartedesignstudio@gmail.com">
+                    amartedesignstudio@gmail.com
+                </a>
+            </p>
+            <p>
+                <i class="fas fa-phone-alt"></i>
+                <strong>Telefon / WhatsApp:</strong>
+                <a href="https://wa.me/49176471560176" target="_blank">
+                    +49&nbsp;176&nbsp;471560176
+                </a>
+            </p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://wa.me/49176471560176" target="_blank" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="https://www.instagram.com/ваш-инстаграм" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.facebook.com/ваш-фейсбук" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+
+        <p class="footer-note" data-key="footerNote">
+            Amarte Design Studio startet offiziell im Januar 2026 – aber wir möchten euch schon jetzt überraschen!
+        </p>
+    </div>
+</section>
+
+<footer>
+    <div class="container" data-key="footer">
+        &copy; 2025 Amarte Design Studio. Alle Rechte vorbehalten.
+    </div>
+</footer>
+
+<!-- Подключаем тот же JS, что и на главной -->
+<script src="index.js"></script>
+
+</body>
+</html>

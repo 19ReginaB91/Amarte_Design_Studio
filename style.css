@@ -4,8 +4,8 @@
 
 :root {
     /* Цветовая палитра */
-    --color-accent-lime: #CCFF00; 
-    --color-accent-red: #ff006a; 
+    --color-accent-lime: #9db639; 
+    --color-accent-red: #b84474; 
     --color-bg-light: #F7F7F7; 
     --color-text-dark: #333333; 
     --color-header-bg: #FFFFFF; 
@@ -96,7 +96,7 @@ nav a:hover {
     color: var(--color-accent-lime);
 }
 
-/* Стили для переключателя языка */
+/* Стили для переключателя языка
 .language-switcher {
     display: flex;
     align-items: center;
@@ -123,7 +123,7 @@ nav a:hover {
     background-color: var(--color-accent-red); 
     color: #FFFFFF;
     border-color: var(--color-accent-red);
-}
+} */
 
 /* ==================================== */
 /* 3. HERO SECTION / ДИНАМИЧЕСКИЙ ФОН */
@@ -246,7 +246,8 @@ nav a:hover {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    width: 250px;
+    flex: 0 1 calc(25% - 30px);  
+    max-width: calc(25% - 30px);
     transition: transform 0.3s;
     
     /* ИСПРАВЛЕНО: Убрана фиксированная height, добавлена min-height */
@@ -351,6 +352,52 @@ nav a:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+/* Ссылка под галереей "Weiter zur Galerie" */
+.gallery-more {
+    position: relative;
+    text-align: center;
+    margin-top: 25px;
+    z-index: 50;
+}
+
+.gallery-more-link {
+    display: inline-block;
+    align-items: center;
+    gap: 0.4rem;
+
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-accent-red); /* сайт-красный */
+    position: relative;
+    padding-bottom: 3px;
+
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Анимированное подчёркивание лаймовым акцентом */
+.gallery-more-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+
+    width: 0;
+    height: 2px;
+    background: var(--color-accent-lime);
+
+    transition: width 0.25s ease;
+}
+
+.gallery-more-link:hover {
+    color: var(--color-accent-red); /* оставляем тот же цвет, чтобы не мигало */
+    transform: translateY(-2px);
+}
+.gallery-more-link:hover::after {
+    width: 100%;
+}
+
+
 
 /* ==================================== */
 /* 5.1. МОДАЛЬНОЕ ОКНО (Modal) */
@@ -602,5 +649,743 @@ footer {
     .cta-button {
         padding: 10px 20px;
         font-size: 0.9em;
+    }
+}
+
+/* ==================================== */
+/* 4.1. SERVICES – ОТДЕЛЬНАЯ СТРАНИЦА   */
+/* ==================================== */
+
+/* Верхняя зона страницы (Hero Block) */
+.services-hero {
+    background: linear-gradient(
+        135deg,
+        rgba(157, 182, 57, 0.25),     /* lime мягкий */
+        rgba(184, 68, 116, 0.18)      /* soft red дымка */
+    );
+    padding: 70px 0 55px;
+    text-align: center;
+}
+
+.services-hero h1 {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    color: var(--color-text-dark);
+}
+
+.services-tagline {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.65;
+}
+
+
+/* ==================================== */
+/* БЛОК С УСЛУГАМИ — КАРТОЧКИ          */
+/* ==================================== */
+
+.services-page-main {
+    background: #ffffff;
+    padding: 65px 0 85px;
+}
+
+.services-page-main .service-list {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: center;
+}
+
+.services-page-main .service-item {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    width: 260px;
+    min-height: 270px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    border-top: 6px solid var(--color-accent-lime); /* LIME */
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+    transition: 0.3s ease;
+}
+
+.services-page-main .service-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.services-page-main .service-item i {
+    font-size: 2.4rem;
+    color: var(--color-accent-red);
+    margin-bottom: 15px;
+}
+
+.services-page-main .service-item h3 {
+    font-size: 1.3rem;
+    font-family: var(--font-heading);
+    margin-bottom: 12px;
+    color: var(--color-text-dark);
+}
+
+.services-page-main .service-item p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+/* ==================================== */
+/* ПОСЛЕДНЯЯ СЕКЦИЯ — ТРИ ПРЕИМУЩЕСТВА */
+/* ==================================== */
+
+.services-extra-section {
+    background: #fafafa;
+    padding: 75px 0 90px;
+    text-align: center;
+}
+
+.services-extra-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2.1rem;
+    margin-bottom: 35px;
+    color: var(--color-text-dark);
+}
+
+/* Контейнер с боксами */
+.services-highlights {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+/* Каждый бокс */
+.highlight {
+    width: 280px;
+    background: #ffffff;
+
+    border-left: 6px solid var(--color-accent-lime);   /* LIME BORDER */
+    border-radius: 12px;
+
+    padding: 25px 22px;
+    text-align: left;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+    transition: 0.3s ease;
+}
+
+.highlight:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.13);
+}
+
+.highlight h3 {
+    font-size: 1.15rem;
+    color: var(--color-accent-red);
+    margin-bottom: 8px;
+}
+
+.highlight p {
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .highlight {
+        width: 90%;
+        text-align: center;
+        border-left: none;
+        border-top: 6px solid var(--color-accent-lime);
+    }
+}
+
+/* ==================================== */
+/* SERVICES WOW BLOCK — Für wen / Anlässe / Prozess  */
+/* ==================================== */
+
+.services-extra-section {
+    background: #fafafa;
+    padding: 80px 0 100px;
+    text-align: center;
+}
+
+/* Грид */
+.services-extra-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+}
+
+/* Блоки */
+.services-extra-block {
+    background: #ffffff;
+    padding: 35px 28px;
+    border-radius: 14px;
+    text-align: left;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    border-top: 6px solid var(--color-accent-red);
+    transform: translateY(30px);
+    opacity: 0;
+    transition: 0.7s ease;
+}
+
+/* Анимация появления */
+.services-extra-block.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Заголовки */
+.services-extra-block h2 {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-text-dark);
+    margin-bottom: 12px;
+}
+
+.services-extra-block h2 i {
+    color: var(--color-accent-red);
+    font-size: 1.4rem;
+}
+
+/* Списки */
+.services-extra-block ul,
+.services-extra-block ol {
+    margin-top: 12px;
+}
+
+.services-extra-block li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #444;
+    padding-left: 6px;
+    position: relative;
+}
+
+/* Красивый маленький декоративный маркер */
+.services-extra-block ul li::before {
+    content: "•";
+    color: var(--color-accent-lime);
+    position: absolute;
+    left: -10px;
+    font-size: 1.2rem;
+}
+
+/* Мобильная версия */
+@media(max-width: 768px) {
+    .services-extra-block {
+        text-align: center;
+        border-top-width: 6px;
+        border-left: none;
+    }
+
+    .services-extra-block h2 {
+        justify-content: center;
+    }
+}
+/* ==================================== */
+/* 1. БАЗОВАЯ СТРУКТУРА ABOUT.HTML */
+/* ==================================== */
+
+.about-page-main {
+    padding-bottom: 80px;
+}
+
+.team-section {
+    padding: 60px 0;
+    background-color: var(--color-bg-light); 
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 70px; /* Увеличено расстояние между карточками */
+    flex-wrap: wrap; 
+}
+
+/* ==================================== */
+/* 2. БАЗА FLIP CARD (Переворот) */
+/* ==================================== */
+
+.flip-card {
+    background-color: transparent;
+    width: 420px; /* Увеличена ширина */
+    height: 550px; /* Увеличена высота */
+    perspective: 1000px; 
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Чуть темнее тень */
+    border-radius: 12px;
+    transition: transform 0.6s, box-shadow 0.6s;
+    
+    /* Добавление для стабильности 3D-трансформации */
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover {
+    transform: translateY(-8px); /* Больше подъем при наведении */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Контейнер, который будет вращаться */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d; /* Важно для плавного переворота */
+    border-radius: inherit;
+}
+
+/* Вращение при наведении */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Лицевая и обратная стороны */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    border-radius: inherit;
+    padding: 40px 30px; /* Увеличен внутренний отступ */
+    
+    /* Центрирование контента внутри карточки */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card-front {
+    background-color: #FFFFFF; 
+    z-index: 2;
+}
+
+.flip-card-back {
+    background-color: var(--color-text-dark);
+    color: #FFFFFF;
+    transform: rotateY(180deg); 
+    text-align: left; /* Текст внутри должен быть выровнен по левому краю */
+    padding: 40px;
+}
+
+.profile-photo {
+    width: 200px; /* Увеличено фото */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    transition: border 0.3s;
+}
+
+.flip-card-front h2 {
+    margin-bottom: 5px;
+    font-size: 2em; /* Увеличен заголовок */
+}
+
+.role-short {
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.flip-card-back h3 {
+    font-size: 1.5em; /* Увеличен заголовок на обороте */
+    font-weight: 700;
+    margin-bottom: 20px;
+    /* Теперь выровнен по левому краю, как и остальной текст на обороте */
+    text-align: left; 
+    width: 100%;
+}
+
+.flip-card-back p {
+    font-size: 1.05em; /* Немного крупнее текст */
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+/* ==================================== */
+/* 3. КОНТРАСТНЫЕ СТИЛИ (IT vs ART) */
+/* ==================================== */
+
+/* --- 3.1. СТИЛЬ РЕГИНЫ (TECH/IT) --- */
+
+.tech-style .role-short {
+    color: var(--color-accent-lime); 
+}
+
+.tech-border {
+    border: 6px solid var(--color-accent-lime); /* Толще граница */
+    box-shadow: 0 0 12px rgba(157, 182, 57, 0.8); /* Ярче свечение */
+}
+
+/* Эффект Неона на лицевой стороне */
+.tech-neon-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px; /* Толще полоса */
+    background: var(--color-accent-lime);
+    box-shadow: 0 0 20px var(--color-accent-lime); /* Ярче свечение */
+    transition: width 0.4s ease-out;
+    width: 0;
+}
+.flip-card.tech-style:hover .flip-card-front::before {
+    width: 100%; 
+}
+
+/* Обратная сторона - Неоновая Рамка */
+.flip-card-back.tech-frame {
+    border: 2px solid var(--color-accent-lime); /* Толще рамка */
+    box-shadow: 0 0 15px var(--color-accent-lime), inset 0 0 15px var(--color-accent-lime);
+}
+.flip-card-back.tech-frame h3 {
+    text-shadow: 0 0 8px var(--color-accent-lime);
+}
+
+
+/* --- 3.2. СТИЛЬ АНИТЫ (ART/КРЕАТИВ) --- */
+
+.art-style .role-short {
+    color: var(--color-accent-red); 
+}
+
+/* Граница фото (ART) */
+.art-border {
+    border: 6px solid var(--color-accent-red);
+    box-shadow: 0 0 20px rgba(184, 68, 116, 0.6); /* Ярче тень */
+}
+
+/* Обратная сторона - Креативная Рамка */
+.flip-card-back.art-frame {
+    border: 2px solid var(--color-accent-red);
+    
+    /* Увеличенный эффект мягкого размытого края */
+    box-shadow: 0 0 20px rgba(184, 68, 116, 1), 0 0 8px rgba(184, 68, 116, 0.7) inset;
+}
+.flip-card-back.art-frame h3 {
+    color: var(--color-accent-red);
+    text-shadow: 0 0 8px rgba(184, 68, 116, 0.8);
+}
+
+
+/* ==================================== */
+/* 4. АДАПТИВНОСТЬ */
+/* ==================================== */
+
+@media (max-width: 900px) {
+    .team-grid {
+        gap: 50px;
+    }
+    .flip-card {
+        width: 90%; 
+        max-width: 380px; /* Чуть меньше на мобильных */
+        height: 500px;
+    }
+}
+
+/* ==================================== */
+/* 1. СТРУКТУРА ГАЛЕРЕИ */
+/* ==================================== */
+
+.gallery-page-main {
+    padding-bottom: 80px;
+}
+
+.gallery-hero {
+    background-color: var(--color-bg-light); 
+    padding: 60px 0 40px;
+    text-align: center;
+}
+
+.gallery-hero h1 {
+    font-size: 3em;
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+}
+
+.gallery-tagline {
+    font-size: 1.1em;
+    color: var(--color-text-grey);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.artwork-grid-section {
+    padding: 60px 0;
+}
+
+
+/* ==================================== */
+/* 2. Masonry GRID (Каскадная Сетка) */
+/* ==================================== */
+
+.art-grid {
+    /* Magic CSS Grid: column-count для создания Masonry-эффекта */
+    column-count: 3; 
+    column-gap: 20px;
+    max-width: 1400px; /* Делаем сетку шире */
+    margin: 0 auto;
+}
+
+.gallery-item {
+    /* Важно: предотвращает разрыв элемента между колонками */
+    break-inside: avoid; 
+    margin-bottom: 20px; 
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Эффект появления при загрузке/скролле */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s forwards;
+}
+
+/* Эффект при наведении (WOW!) */
+.gallery-item:hover {
+    transform: scale(1.03) translateY(-2px); /* Приподнимаем и слегка увеличиваем */
+    box-shadow: 0 10px 30px rgba(184, 68, 116, 0.5); /* Красивая тень с акцентным цветом */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: filter 0.3s ease;
+}
+
+/* Затемнение при наведении */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.view-details {
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .view-details {
+    transform: translateY(0);
+}
+
+/* Анимация плавного появления */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==================================== */
+/* 3. МОДАЛЬНОЕ ОКНО */
+/* ==================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+.modal-content {
+    margin: auto;
+    display: flex;
+    flex-direction: column; 
+    width: 90%;
+    max-width: 1000px;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.modal-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 70vh; /* Ограничиваем высоту, чтобы было видно информацию */
+    background-color: #f7f7f7;
+}
+
+.modal-info {
+    padding: 20px 30px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-caption {
+    margin: 0;
+    font-size: 1.5em;
+    font-family: 'Playfair Display', serif;
+    color: var(--color-text-dark);
+}
+
+.art-category {
+    background-color: var(--color-accent-red); /* Категория арт-цветом */
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+/* Кнопка закрытия */
+.close, .prev, .next {
+    position: absolute;
+    top: 15px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close {
+    right: 35px;
+}
+.prev {
+    left: 15px;
+}
+.next {
+    right: 15px;
+}
+
+.close:hover,
+.prev:hover,
+.next:hover {
+    color: var(--color-accent-lime);
+}
+
+
+/* ==================================== */
+/* 4. ФИЛЬТРЫ */
+/* ==================================== */
+
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 40px;
+    gap: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: transparent;
+    border: 2px solid var(--color-text-grey);
+    color: var(--color-text-grey);
+    padding: 8px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.filter-btn:hover:not(.active) {
+    border-color: var(--color-accent-red);
+    color: var(--color-accent-red);
+}
+
+.filter-btn.active {
+    background-color: var(--color-accent-red);
+    border-color: var(--color-accent-red);
+    color: white;
+}
+
+
+/* ==================================== */
+/* 5. АДАПТИВНОСТЬ */
+/* ==================================== */
+
+@media (max-width: 1024px) {
+    .art-grid {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .art-grid {
+        column-count: 1;
+        column-gap: 0;
+    }
+    .gallery-item {
+        margin: 0 10px 20px;
+    }
+    .modal-content {
+        flex-direction: column;
+        width: 95%;
+    }
+    .modal-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .modal-caption {
+        font-size: 1.2em;
     }
 }
