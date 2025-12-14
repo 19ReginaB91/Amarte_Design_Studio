@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -12,93 +13,144 @@
 </head>
 <body>
 
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-                <img src="assets/media/logo.png" alt="Amarte Design Studio Logo" class="logo-img">
-            </div>
-            <nav>
-                <a href="index.html" data-key="navHome">Startseite</a>
-                <a href="about.html" data-key="navAbout">Über Uns</a>
-                <a href="services.html" data-key="navServices">Leistungen</a>
-                <a href="gallery.html" data-key="navGallery">Galerie</a>
-                <a href="promo.html" data-key="navPromo">Aktion</a>
-                <a href="contact.html" data-key="navContact">Kontakt</a>
-            </nav>
-            <!-- <div class="language-switcher">
-                <button id="lang-de" class="lang-button active" data-lang="de">DE</button>
-                <button id="lang-en" class="lang-button" data-lang="en">EN</button>
-                <button id="lang-nl" class="lang-button" data-lang="nl">NL</button>
-                <button id="lang-ru" class="lang-button" data-lang="ru">RU</button>
-            </div> -->
+<header>
+    <div class="container header-content">
+        <div class="logo">
+            <img src="assets/media/logo.png" alt="Amarte Design Studio Logo" class="logo-img">
         </div>
-    </header>
+        <nav>
+            <a href="index.html" data-key="navHome">Startseite</a>
+            <a href="about.html" class="active" data-key="navAbout">Über Uns</a>
+            <a href="services.html" data-key="navServices">Leistungen</a>
+            <a href="gallery.html" data-key="navGallery">Galerie</a>
+            <a href="promo.html" data-key="navPromo">Angebots</a>
+            <a href="contact.html" data-key="navContact">Kontakt</a>
+        </nav>
+    </div>
+</header>
 
-    <main class="about-page-main">
-        <section class="services-hero">
-            <div class="container">
-                <h1 data-key="navAbout">Über Uns</h1>
-                <p class="services-tagline" data-key="aboutIntro">
-                    Wir glauben: Ein Geschenk ist mehr als nur ein Objekt – es ist ein Gefühl, das bleibt.
-                </p>
-            </div>
-        </section>
+<main class="about-page-main">
 
-        <section id="the-team" class="team-section">
-            <div class="container team-grid">
-                
-                <div class="flip-card tech-style">
-                    <div class="flip-card-inner">
-                        
-                        <div class="flip-card-front tech-neon-glow">
-                            <img src="assets/media/regina.jpg" alt="Regina Batiridou Photo" class="profile-photo tech-border">
-                            <h2 data-key="aboutCardReginaTitle">Regina Batiridou</h2>
-                            <p class="role-short" data-key="aboutCardReginaRole">Strategie & Code</p>
-                        </div>
-                        
-                        <div class="flip-card-back tech-frame">
-                            <h3 data-key="aboutCardReginaRoleFull">IT-Spezialistin & Digital-Architektin</h3>
-                            <p data-key="aboutCardReginaFrontText" class="intro-text">
-                                IT-Expertin, die die Brücke zwischen Logik und Kreativität baut. 
-                            </p>
-                            <p data-key="aboutCardReginaBackText">
-                                Verantwortlich für die technische Umsetzung, SEO und die digitale Infrastruktur. Ihr Fokus liegt auf Performance, Sicherheit und harmonischer User Experience (UX).
-                            </p>
-                        </div>
-                    </div>
+    <section class="services-hero">
+        <div class="container">
+            <h1 data-key="navAbout">Über Uns</h1>
+            <p class="services-tagline" data-key="aboutIntro">
+                Wir glauben: Ein Geschenk ist mehr als nur ein Objekt – es ist ein Gefühl, das bleibt.
+            </p>
+        </div>
+    </section>
+
+    <section class="mission-section">
+        <div class="container">
+            <h2><i class="fas fa-hand-holding-heart"></i> Unsere Philosophie – Von Herzen für Sie</h2>
+
+            <p class="mission-intro">
+                In einer Welt, die von Massenproduktion dominiert wird, glauben wir fest daran, dass die schönsten Dinge im Leben
+                <strong>einzigartig und mit Seele</strong> gemacht sind. Amarte Design Studio wurde aus der tiefen Überzeugung geboren,
+                dass wahre Kunst und perfekte Geschenke nicht „abgestempelt“, sondern
+                <strong>individuell erschaffen</strong> werden müssen.
+            </p>
+
+            <div class="mission-core-values">
+                <div class="value-item">
+                    <i class="fas fa-palette"></i>
+                    <h3>Die Magie der Unikate</h3>
+                    <p>
+                        Jede unserer Arbeiten – sei es ein maßgeschneidertes <strong>Wandgemälde</strong>, ein handillustriertes
+                        <strong>Buchcover</strong>, eine personalisierte <strong>Grußkarte</strong> oder ein einzigartiges
+                        <strong>Kunstwerk auf Leinwand</strong> – ist ein Unikat.
+                    </p>
                 </div>
 
-                <div class="flip-card art-style">
-                    <div class="flip-card-inner">
-                        
-                        <div class="flip-card-front art-paint-splash">
-                            <img src="assets/media/anita.jpg" alt="Anita Henzel Photo" class="profile-photo art-border">
-                            <h2 data-key="aboutCardAnitaTitle">Anita Henzel</h2>
-                            <p class="role-short" data-key="aboutCardAnitaRole">Kunst & Emotion</p>
-                        </div>
-                        
-                        <div class="flip-card-back art-frame">
-                            <h3 data-key="aboutCardAnitaRoleFull">Künstlerin & Kreativdirektorin</h3>
-                            <p data-key="aboutCardAnitaFrontText" class="intro-text">
-                                Künstlerin mit Herz und Seele, die Ihre Ideen in fühlbare, handgefertigte Unikate verwandelt.
-                            </p>
-                            <p data-key="aboutCardAnitaBackText">
-                                Sie ist der kreative Kopf hinter jedem Werk. Sie garantiert die einzigartige, emotionale Handschrift von Amarte Design Studio.
-                            </p>
-                        </div>
-                    </div>
+                <div class="value-item">
+                    <i class="fas fa-gift"></i>
+                    <h3>Geschenke mit Herz und Seele</h3>
+                    <p>
+                        Für uns ist wichtig, dass sowohl der Schenker als auch der Beschenkte echte Emotionen erleben.
+                        <strong>Ein Geschenk von Amarte</strong> trägt immer Persönlichkeit, Geschichte und Gefühl.
+                    </p>
+                </div>
+
+                <div class="value-item">
+                    <i class="fas fa-drafting-compass"></i>
+                    <h3>Der Weg zur Perfektion</h3>
+                    <p>
+                        Jedes Projekt beginnt mit Zuhören, Struktur und einem klaren Konzept – von <strong>Flyern</strong> und
+                        <strong>Visitenkarten</strong> bis hin zur <strong>künstlerischen Gestaltung von Räumen</strong>.
+                    </p>
                 </div>
             </div>
-        </section>
 
-    </main>
-    
-    <footer>
-        <div class="container" data-key="footer">
-            &copy; 2025 Amarte Design Studio. Alle Rechte vorbehalten.
+            <p class="mission-conclusion">
+                Lassen Sie uns gemeinsam etwas Besonderes erschaffen, das bleibt.
+            </p>
         </div>
-    </footer>
+    </section>
 
-    <script src="index.js"></script> 
+    <!-- TEAM -->
+    <section id="the-team" class="team-section">
+        <div class="container team-grid">
+
+            <!-- REGINA -->
+            <div class="flip-card tech-style">
+                <div class="flip-card-inner">
+
+                    <div class="flip-card-front tech-neon-glow">
+                        <img src="assets/media/regina.jpg" alt="Regina Batiridou Photo" class="profile-photo tech-border">
+                        <h2>Regina Batiridou</h2>
+                        <p class="role-short">CEO & Projektleitung</p>
+                    </div>
+
+                    <div class="flip-card-back tech-frame">
+                        <h3>Strategie · Management · Umsetzung</h3>
+                        <p class="intro-text">
+                            Ich verbinde Struktur, Strategie und Technologie – damit aus Ideen funktionierende Projekte werden.
+                        </p>
+                        <p>
+                            Verantwortlich für Konzeption, Organisation und die gesamte Kommunikation mit Kunden.
+                            Dazu gehören Projektplanung, Dokumentation, Qualitätssicherung sowie die digitale Umsetzung
+                            (Web, SEO, Performance und UX).
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ANITA -->
+            <div class="flip-card art-style">
+                <div class="flip-card-inner">
+
+                    <div class="flip-card-front art-paint-splash">
+                        <img src="assets/media/anita.jpg" alt="Anita Henzel Photo" class="profile-photo art-border">
+                        <h2>Anita Henzel</h2>
+                        <p class="role-short">Künstlerin & Kreativdirektorin</p>
+                    </div>
+
+                    <div class="flip-card-back art-frame">
+                        <h3>Kunst & Illustration</h3>
+                        <p class="intro-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        &copy; 2025 Amarte Design Studio. Alle Rechte vorbehalten.
+    </div>
+</footer>
+
+<script src="index.js"></script>
 </body>
 </html>

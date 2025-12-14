@@ -13,7 +13,7 @@ const translations = {
         navAbout: 'Über Uns',
         navServices: 'Leistungen',
         navGallery: 'Galerie',
-        navPromo: 'Aktion',
+        navPromo: 'Angebots',
         navContact: 'Kontakt',
 
         // Герой (главная)
@@ -95,6 +95,7 @@ const translations = {
         galleryHeading: 'Unsere Kunstwerke',
         galleryIntro: 'Entdecken Sie eine Auswahl unserer handgefertigten Unikate und Porträts. Jeder Klick öffnet eine Geschichte.',
         galleryViewDetails: 'Details anzeigen',
+        galleryMore: '➜ Weiter zur Galerie', // КЛЮЧ ДЛЯ ССЫЛКИ НА ГЛАВНОЙ
 
         // КЛЮЧИ ДЛЯ ФИЛЬТРОВ И МОДАЛЬНОГО ОКНА
         filterAll: 'Alle', filterPortraits: 'Porträts', filterGifts: 'Unikate', filterDesign: 'Design',
@@ -197,6 +198,7 @@ const translations = {
         galleryHeading: 'Наши Произведения Искусства',
         galleryIntro: 'Посмотрите на наши уникальные изделия и портреты ручной работы. Каждый клик открывает историю.',
         galleryViewDetails: 'Показать детали',
+        galleryMore: '➜ Перейти в Галерею', // КЛЮЧ ДЛЯ ССЫЛКИ НА ГЛАВНОЙ
 
         // КЛЮЧИ ДЛЯ ФИЛЬТРОВ И МОДАЛЬНОГО ОКНА
         filterAll: 'Все', filterPortraits: 'Портреты', filterGifts: 'Подарки', filterDesign: 'Дизайн',
@@ -204,7 +206,7 @@ const translations = {
 
         promoHeading: 'Ваш Рождественский Подарок от нас!',
         promoDiscount: 'Получите <strong>10% скидку</strong> на ваш заказ!',
-        promoText: 'Закажите сейчас ваш личный подарок.',
+        promoText: 'Заказать сейчас ваш личный подарок.',
         promoCTA: 'Заказать со скидкой',
 
         contactHeading: 'Контакты',
@@ -286,7 +288,7 @@ const translations = {
         servicesOcc1: 'Birthdays & weddings',
         servicesOcc2: 'Baptisms & anniversaries',
         servicesOcc3: 'New beginnings & farewells',
-        servicesOcc4: '"Just because" – to say thank you 💛',
+        servicesOcc4: '"Just because" – to say thank thank you 💛',
 
         servicesProcessTitle: 'How does an order work?',
         servicesStep1: 'Contact: You send us your idea.',
@@ -298,6 +300,7 @@ const translations = {
         galleryHeading: 'Our Artworks',
         galleryIntro: 'Explore our gallery of handcrafted pieces and portraits. Every click opens a story.',
         galleryViewDetails: 'Show Details',
+        galleryMore: '➜ Continue to Gallery', // КЛЮЧ ДЛЯ ССЫЛКИ НА ГЛАВНОЙ
 
         // КЛЮЧИ ДЛЯ ФИЛЬТРОВ И МОДАЛЬНОГО ОКНА
         filterAll: 'All', filterPortraits: 'Portraits', filterGifts: 'Gifts', filterDesign: 'Design',
@@ -399,6 +402,7 @@ const translations = {
         galleryHeading: 'Onze Kunstwerken',
         galleryIntro: 'Bekijk een selectie van onze handgemaakte werken. Elke klik opent een verhaal.',
         galleryViewDetails: 'Toon Details',
+        galleryMore: '➜ Ga verder naar de Galerij', // КЛЮЧ ДЛЯ ССЫЛКИ НА ГЛАВНОЙ
 
         // КЛЮЧИ ДЛЯ ФИЛЬТРОВ И МОДАЛЬНОГО ОКНА
         filterAll: 'Alle', filterPortraits: 'Portretten', filterGifts: 'Geschenken', filterDesign: 'Design',
@@ -421,13 +425,14 @@ const translations = {
 
 // ====================================
 // 2. ФУНКЦИИ ПЕРЕКЛЮЧЕНИЯ ЯЗЫКА
+// (Оставлены для сохранения вашего кода, но неактивны)
 // ====================================
 
 function applyTranslations(lang) {
-    // Временно жестко устанавливаем DE, если запрашиваемый язык не существует
-    const effectiveLang = translations[lang] ? lang : 'de'; 
+    // Временно жестко устанавливаем DE, если запрашиваемый язык не существует или не активен
+    const effectiveLang = translations[lang] ? lang : 'de';
     const currentTranslations = translations[effectiveLang] || translations['de'];
-    
+
     document.querySelectorAll('[data-key]').forEach(element => {
         const key = element.getAttribute('data-key');
         let translation = currentTranslations[key] || '';
@@ -435,6 +440,13 @@ function applyTranslations(lang) {
         // Используем .innerHTML для ключей, содержащих HTML или переводы миссии
         if (key === 'promoDiscount' || key === 'aboutText' || key === 'footer' || key === 'footerNote' || key.startsWith('missionText')) {
             element.innerHTML = translation;
+        } else if (key === 'galleryMore') {
+            // Специальная обработка для ссылки галереи, чтобы сохранить стрелку
+            const galleryLink = document.querySelector('.gallery-more-link[data-key="galleryMore"]');
+            if (galleryLink) {
+                // Убеждаемся, что стрелка всегда в начале
+                galleryLink.innerHTML = `➜ ${translation.replace('➜', '').trim()}`;
+            }
         } else if (element.tagName === 'A' && element.classList.contains('cta-button')) {
             element.textContent = translation;
         } else {
@@ -458,202 +470,219 @@ function applyTranslations(lang) {
 }
 
 function setLanguage(lang) {
-    // Временно жестко устанавливаем DE, пока другие языки отключены
-    const effectiveLang = 'de'; 
+    // Жестко устанавливаем DE, пока другие языки отключены
+    const effectiveLang = 'de';
 
     applyTranslations(effectiveLang);
 
-    // Удаляем классы 'active' со всех кнопок
+    // Логика активации кнопки DE (удаляем классы со всех, добавляем только DE)
     document.querySelectorAll('.lang-button').forEach(btn => {
         btn.classList.remove('active');
     });
 
-    // Добавляем класс 'active' только на кнопку DE
     const activeBtn = document.querySelector(`#lang-de`);
     if (activeBtn) {
         activeBtn.classList.add('active');
     }
 
-    // Сохранение языка в localStorage можно временно оставить DE
+    // Сохранение языка (временно DE)
     localStorage.setItem('websiteLang', 'de');
 }
 
 
-// ====================================
-// 3. SLIDER HERO
-// ====================================
+// ===========================================
+// 3. HERO SLIDER LOGIC (Главная страница)
+// ===========================================
 
-let heroSliderTimer = null;
+function initHeroSlider() {
+    const heroItems = document.querySelectorAll('.hero-bg-item');
+    let currentIndex = 0;
 
-function startHeroImageSlider() {
-    const images = document.querySelectorAll('.hero-bg-item');
-    if (!images || images.length === 0) return;
-
-    const hasActive = Array.from(images).some(img => img.classList.contains('active'));
-    if (!hasActive) {
-        images[0].classList.add('active');
+    if (heroItems.length === 0) {
+        console.warn("Hero items not found. Slider function disabled.");
+        return;
     }
 
-    if (images.length === 1) return;
+    // Убеждаемся, что только первый элемент активен при старте
+    heroItems.forEach((item, index) => {
+        item.classList.remove('active');
+        if (index === 0) {
+            item.classList.add('active');
+        }
+    });
 
-    if (heroSliderTimer) clearInterval(heroSliderTimer);
-
-    let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
-    if (currentIndex < 0) currentIndex = 0;
-
-    function nextImage() {
-        images[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex + 1) % images.length;
-        images[currentIndex].classList.add('active');
+    function showNextHeroItem() {
+        heroItems[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % heroItems.length;
+        heroItems[currentIndex].classList.add('active');
     }
 
-    heroSliderTimer = setInterval(nextImage, 5000);
+    setInterval(showNextHeroItem, 5000);
 }
 
 
-// ====================================
-// 4. ГАЛЕРЕЯ (С ФИЛЬТРАМИ И КАТЕГОРИЯМИ)
-// ====================================
+// ===========================================
+// 4. GALLERY FILTER LOGIC (ФИЛЬТРЫ НА gallery.html)
+// ===========================================
 
-function initGallery() {
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImage');
-    const captionText = document.getElementById('caption');
-    const categorySpan = document.querySelector('.art-category');
-    const closeBtn = document.getElementById('closeModal');
-    const prevBtn = document.getElementById('prevButton');
-    const nextBtn = document.getElementById('nextButton');
-    const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+function initGalleryFilters() {
     const filterButtons = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('.art-grid .gallery-item');
 
-    if (!modal || galleryItems.length === 0) return;
+    // Если это не gallery.html — выходим
+    if (!filterButtons.length || !items.length) return;
 
-    let currentFilteredItems = galleryItems;
-    let currentIndex = 0;
-    // Используем 'de', так как другие языки отключены
-    let currentLang = 'de'; 
-
-
-    // Получение перевода категории
-    const getCategoryTranslation = (category, lang) => {
-        const key = 'category' + category.charAt(0).toUpperCase() + category.slice(1);
-        // Всегда ищем в DE, так как другие языки отключены
-        return translations['de'][key] || category; 
-    };
-    
-    // --- ФУНКЦИЯ ПРОСМОТРА КАРТИНКИ ---
-    const showImage = (index) => {
-        // Проверяем, что есть отфильтрованные элементы
-        if (currentFilteredItems.length === 0) return;
-        
-        if (index < 0) {
-            currentIndex = currentFilteredItems.length - 1;
-        } else if (index >= currentFilteredItems.length) {
-            currentIndex = 0;
-        } else {
-            currentIndex = index;
-        }
-
-        const currentItem = currentFilteredItems[currentIndex];
-        const fullSrc = currentItem.getAttribute('data-full');
-        const title = currentItem.getAttribute('data-title');
-        const category = currentItem.getAttribute('data-category');
-
-        modal.style.display = "block";
-        modalImg.src = fullSrc;
-        captionText.textContent = title;
-        
-        // Установка категории с переводом
-        currentLang = 'de'; // Язык жестко установлен на DE
-        categorySpan.textContent = getCategoryTranslation(category, currentLang);
-    };
-
-    // --- ФУНКЦИЯ ФИЛЬТРАЦИИ ---
-    const filterGallery = (filter) => {
-        currentFilteredItems = galleryItems.filter(item => 
-            filter === 'all' || item.getAttribute('data-category') === filter
-        );
-
-        galleryItems.forEach(item => {
-            if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                // Плавное появление (для Masonry grid)
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-        
-        // Сброс индекса после фильтрации
-        currentIndex = 0; 
-    };
-    
-    // --- ОБРАБОТЧИКИ КЛИКОВ ---
-    
-    // 1. Клики по фильтрам
     filterButtons.forEach(btn => {
-        btn.onclick = () => {
+        btn.addEventListener('click', () => {
             filterButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            filterGallery(btn.getAttribute('data-filter'));
-        };
+
+            const filter = btn.getAttribute('data-filter') || 'all';
+
+            items.forEach(item => {
+                const cat = item.getAttribute('data-category') || '';
+                const show = (filter === 'all') || (cat === filter);
+                item.style.display = show ? '' : 'none';
+            });
+        });
     });
-    
-    // 2. Клики по элементам галереи
-    galleryItems.forEach((item) => {
-        item.onclick = function() {
-            // Находим индекс в текущем отфильтрованном списке
-            const filteredIndex = currentFilteredItems.indexOf(item);
-            if (filteredIndex !== -1) {
-                showImage(filteredIndex);
-            }
-        };
-    });
-
-    // 3. Управление модальным окном
-    closeBtn.onclick = () => modal.style.display = "none";
-    prevBtn.onclick = () => showImage(currentIndex - 1);
-    nextBtn.onclick = () => showImage(currentIndex + 1);
-
-    window.onclick = function(event) {
-        if (event.target == modal) modal.style.display = "none";
-    };
-
-    document.onkeydown = function(e) {
-        if (modal.style.display === "block") {
-            if (e.key === "Escape") modal.style.display = "none";
-            if (e.key === "ArrowLeft") showImage(currentIndex - 1);
-            if (e.key === "ArrowRight") showImage(currentIndex + 1);
-        }
-    };
-    
-    // Инициализация фильтра по умолчанию
-    filterGallery('all');
 }
 
 
-// ====================================
-// 5. INIT
-// ====================================
+// ===========================================
+// 5. GALLERY MODAL LOGIC (Модальное окно галереи)
+// Работает и на главной, и на gallery.html
+// ===========================================
 
-document.addEventListener('DOMContentLoaded', () => {
+function initGalleryModal() {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const captionText = document.getElementById('caption');
+    const closeBtn = document.getElementById('closeModal');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
 
-    // Добавляем data-key для элементов в секции контактов/футера
-    if (document.querySelector('.contact-details p:nth-child(1) strong')) {
-        document.querySelector('.contact-details p:nth-child(1) strong').setAttribute('data-key', 'contactAddress');
-        document.querySelector('.contact-details p:nth-child(2) strong').setAttribute('data-key', 'contactEmail');
+    // Если на странице нет модалки — выходим (например, на некоторых страницах)
+    if (!modal || !modalImage || !captionText || !closeBtn || !prevButton || !nextButton) return;
+
+    const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+    let currentImageIndex = -1;
+
+    function getFullSrc(item) {
+        const fullSrc = item.getAttribute && item.getAttribute('data-full');
+        if (fullSrc) return fullSrc;
+
+        // fallback: если это IMG (например, на главной)
+        if (item.tagName === 'IMG') return item.src;
+
+        const img = item.querySelector ? item.querySelector('img') : null;
+        return img ? img.src : '';
     }
 
+    function getTitle(item) {
+        const dataTitle = item.getAttribute && item.getAttribute('data-title');
+        if (dataTitle) return dataTitle;
+
+        const img = item.querySelector ? item.querySelector('img') : null;
+        if (img && img.alt) return img.alt;
+
+        if (item.tagName === 'IMG' && item.alt) return item.alt;
+
+        return '';
+    }
+
+    function updateModalContent(index) {
+        if (index >= 0 && index < galleryItems.length) {
+            const item = galleryItems[index];
+            modalImage.src = getFullSrc(item);
+            captionText.textContent = getTitle(item);
+        }
+    }
+
+    // Открытие
+    galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            currentImageIndex = index;
+            modal.style.display = "flex";
+            updateModalContent(currentImageIndex);
+        });
+    });
+
+    // Закрытие
+    closeBtn.onclick = () => {
+        modal.style.display = "none";
+        modalImage.src = "";
+    };
+
+    // Закрытие при клике на фон (только фон, не контент)
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+            modalImage.src = "";
+        }
+    });
+
+    // Навигация
+    prevButton.onclick = (e) => {
+        e.preventDefault();
+        currentImageIndex = (currentImageIndex - 1 + galleryItems.length) % galleryItems.length;
+        updateModalContent(currentImageIndex);
+    };
+
+    nextButton.onclick = (e) => {
+        e.preventDefault();
+        currentImageIndex = (currentImageIndex + 1) % galleryItems.length;
+        updateModalContent(currentImageIndex);
+    };
+
+    // Клавиши
+    document.addEventListener('keydown', (e) => {
+        if (modal.style.display !== "flex") return;
+
+        if (e.key === "Escape") closeBtn.onclick();
+        if (e.key === "ArrowLeft") prevButton.onclick(e);
+        if (e.key === "ArrowRight") nextButton.onclick(e);
+    });
+}
+
+
+// ===========================================
+// 6. INITIALIZATION (Запуск функций после загрузки DOM)
+// ===========================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Инициализация переводов (временно принудительно DE)
+    // Добавление data-key для элементов в секции контактов/футера
+    if (document.querySelector('.contact-details p:nth-child(1) strong')) {
+        document.querySelector('.contact-details p:nth-child(1) strong').setAttribute('data-key', 'contactAddress');
+    }
+    if (document.querySelector('.contact-details p:nth-child(2) strong')) {
+        document.querySelector('.contact-details p:nth-child(2) strong').setAttribute('data-key', 'contactEmail');
+    }
     if (document.querySelector('footer .container')) {
         document.querySelector('footer .container').setAttribute('data-key', 'footer');
     }
-
     if (document.querySelector('.footer-note')) {
         document.querySelector('.footer-note').setAttribute('data-key', 'footerNote');
     }
+    setLanguage('de');
+    // КОНЕЦ ИНИЦИАЛИЗАЦИИ ПЕРЕВОДОВ
 
-    // Установка языка. Всегда используем DE.
-    // const defaultLang = localStorage.getItem('websiteLang') || 'de'; // ЗАКОММЕНТИРОВАНО
-    setLanguage('de'); // Жестко устанавливаем DE
+
+    // Запуск слайдера только на главной странице
+    if (document.getElementById('hero')) {
+        initHeroSlider();
+    }
+
+    // ✅ ФИЛЬТРЫ НА gallery.html (там .art-grid)
+    if (document.querySelector('.art-grid')) {
+        initGalleryFilters();
+    }
+
+    // ✅ МОДАЛКА на gallery.html и на главной (если есть .gallery-item и есть #imageModal)
+    if (document.querySelector('.gallery-item')) {
+        initGalleryModal();
+    }
 
     // ЗАКОММЕНТИРОВАН ОБРАБОТЧИК КНОПОК ПЕРЕКЛЮЧЕНИЯ ЯЗЫКА
     /*
@@ -668,26 +697,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     */
-
-    startHeroImageSlider();
-    
-    // Инициализация галереи только на странице галереи
-    if (document.getElementById('artwork-grid')) {
-        initGallery(); 
-    }
 });
-
-// WOW-анимация для 3 блоков (Für wen, Anlässe, Prozess)
-const highlightBlocks = document.querySelectorAll('.services-extra-block');
-
-function revealBlocks() {
-    highlightBlocks.forEach(block => {
-        const rect = block.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 80) {
-            block.classList.add('show');
-        }
-    });
-}
-
-window.addEventListener('scroll', revealBlocks);
-window.addEventListener('load', revealBlocks);

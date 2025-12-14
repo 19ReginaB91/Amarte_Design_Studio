@@ -25,16 +25,10 @@
             <a href="about.html" data-key="navAbout">Über Uns</a>
             <a href="services.html" data-key="navServices">Leistungen</a>
             <a href="gallery.html" data-key="navGallery">Galerie</a>
-            <a href="promo.html" class="active" data-key="navPromo">Aktion</a>
+            <a href="promo.html" class="active" data-key="navPromo">Angebots</a>
             <a href="contact.html" data-key="navContact">Kontakt</a>
         </nav>
-        <!-- <div class="language-switcher">
-            <button id="lang-de" class="lang-button active" data-lang="de">DE</button>
-            <button id="lang-en" class="lang-button" data-lang="en">EN</button>
-            <button id="lang-nl" class="lang-button" data-lang="nl">NL</button>
-            <button id="lang-ru" class="lang-button" data-lang="ru">RU</button>
-        </div> -->
-    </div>
+        </div>
 </header>
 
 <section class="promo-section">
@@ -47,8 +41,18 @@
             Sichern Sie sich <strong>10% Rabatt</strong> auf Ihre Bestellung!
         </p>
 
+        <div class="countdown-wrapper">
+            <p class="countdown-label" data-key="countdownLabel">Nur noch diese Zeit, um den Rabatt zu sichern:</p>
+            <div id="promo-countdown" class="countdown-timer">
+                <div class="time-box"><span id="days">00</span><span>Tage</span></div>
+                <div class="time-box"><span id="hours">00</span><span>Stunden</span></div>
+                <div class="time-box"><span id="minutes">00</span><span>Minuten</span></div>
+                <div class="time-box"><span id="seconds">00</span><span>Sekunden</span></div>
+            </div>
+        </div>
+        
         <p class="promo-text" data-key="promoText">
-            Bestellen Sie jetzt Ihr persönliches Geschenk und sorgen Sie für unvergessliche Momente.
+            Bestellen Sie jetzt Ihr persönliches Geschenk und sorgen Sie für unvergessliche Momente. Die Rabattaktion ist zeitlich stark begrenzt!
         </p>
 
         <a href="contact.html" class="promo-button cta-button" data-key="promoCTA">
@@ -57,6 +61,44 @@
 
         <div class="promo-image-box">
             <img src="assets/media/promo.jpg" alt="Aktion Bild">
+        </div>
+        
+        <div class="special-offer-card">
+            <h3 class="offer-title" data-key="offerTitle"><i class="fas fa-magic"></i> Nur für kurze Zeit: 3 für 2!</h3>
+            <p class="offer-subtitle" data-key="offerSubtitle">
+                Wählen Sie drei illustrative Postkarten oder kleine Auftragsarbeiten, 
+                und die **günstigste** davon erhalten Sie von uns **geschenkt**!
+            </p>
+            <div class="card-grid">
+                <div class="card-item"><i class="fas fa-envelope-open-text"></i> Postkarte 1</div>
+                <div class="card-item"><i class="fas fa-palette"></i> Postkarte 2</div>
+                <div class="card-item best-deal"><i class="fas fa-gift"></i> Gratis!</div>
+            </div>
+            <a href="contact.html" class="cta-small" data-key="offerCTA">
+                Zum 3-für-2-Angebot
+            </a>
+        </div>
+        
+        <div class="promo-details-grid">
+            <div class="details-conditions">
+                <h3 data-key="conditionsTitle"><i class="fas fa-clipboard-list"></i> Aktionsbedingungen:</h3>
+                <ul>
+                    <li data-key="condition1">Gültig für alle Neukundenbestellungen ab 500€ Warenwert.</li>
+                    <li data-key="condition2">Der Rabatt gilt nur für Aufträge, die bis zum Ende des Countdowns verbindlich bestellt werden.</li>
+                    <li data-key="condition3">Gilt für alle Leistungen (Logo, CI, Webdesign, etc.).</li>
+                    <li data-key="condition4">Geben Sie bei der Kontaktaufnahme das Stichwort "WEIHNACHT" an.</li>
+                </ul>
+            </div>
+
+            <div class="details-examples">
+                <h3 data-key="examplesTitle"><i class="fas fa-star"></i> Unsere Top-Leistungen:</h3>
+                <ul>
+                    <li data-key="example1">Modernes Logo-Design (ab 10% günstiger!)</li>
+                    <li data-key="example2">Webauftritt inkl. Hosting (komplett)</li>
+                    <li data-key="example3">Full Corporate Identity Paket</li>
+                    <li data-key="example4">Illustrative Auftragsmalerei</li>
+                </ul>
+            </div>
         </div>
 
         <p class="footer-note" data-key="footerNote">

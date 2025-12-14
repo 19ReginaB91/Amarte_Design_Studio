@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amarte Design Studio — Kontakt</title>
+    <title data-key="pageTitle">Amarte Design Studio — Kontakt</title>
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
 
-    <!-- Стили и шрифты -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -27,73 +25,116 @@
             <a href="about.html" data-key="navAbout">Über Uns</a>
             <a href="services.html" data-key="navServices">Leistungen</a>
             <a href="gallery.html" data-key="navGallery">Galerie</a>
-            <a href="promo.html" data-key="navPromo">Aktion</a>
-            <a href="contact.html" data-key="navContact">Kontakt</a>
+            <a href="promo.html" data-key="navPromo">Angebots</a>
+            <a href="contact.html" class="active" data-key="navContact">Kontakt</a>
         </nav>
-        <!-- <div class="language-switcher">
-            <button id="lang-de" class="lang-button active" data-lang="de">DE</button>
-            <button id="lang-en" class="lang-button" data-lang="en">EN</button>
-            <button id="lang-nl" class="lang-button" data-lang="nl">NL</button>
-            <button id="lang-ru" class="lang-button" data-lang="ru">RU</button>
-        </div> -->
-    </div>
+        </div>
 </header>
 
-<!-- Можно без hero-блока, чтобы страница была компактной -->
-
-<section class="contact-section">
-    <div class="container">
-        <h2 data-key="contactHeading">
-            <i class="fas fa-envelope"></i> Kontakt
-        </h2>
-
-        <!-- Небольшой текст-интро только на немецком (без data-key, чтобы не трогать JS) -->
-        <p class="intro-text">
-            Sie möchten ein persönliches Geschenk bestellen oder haben Fragen?
-            Schreiben Sie uns – wir melden uns so schnell wie möglich.
-        </p>
-
-        <div class="contact-details">
-            <p>
-                <i class="fas fa-map-marker-alt"></i>
-                <strong data-key="contactAddress">Adresse:</strong>
-                Wesel 46485
-            </p>
-            <p>
-                <i class="fas fa-at"></i>
-                <strong data-key="contactEmail">E-Mail:</strong>
-                <a href="mailto:amartedesignstudio@gmail.com">
-                    amartedesignstudio@gmail.com
-                </a>
-            </p>
-            <p>
-                <i class="fas fa-phone-alt"></i>
-                <strong>Telefon / WhatsApp:</strong>
-                <a href="https://wa.me/49176471560176" target="_blank">
-                    +49&nbsp;176&nbsp;471560176
-                </a>
+<main class="main-content-wrapper"> 
+    
+    <section class="contact-hero-section">
+        <div class="container">
+            <h1 data-key="contactHeroHeading">Bereit für Ihr nächstes Projekt?</h1>
+            <p data-key="contactHeroTagline">
+                Nehmen Sie Kontakt auf, um Ihre kreativen Ideen zu besprechen. Wir freuen uns auf den Austausch mit Ihnen!
             </p>
         </div>
+    </section>
 
-        <div class="social-links">
-            <a href="https://wa.me/49176471560176" target="_blank" aria-label="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
+    <section class="contact-page-main">
+        <div class="container contact-main-grid">
+            
+            <div class="form-area-wrapper">
+                <h2 data-key="contactFormHeading"><i class="fas fa-edit"></i> Schreiben Sie uns eine Nachricht</h2>
+                
+                <form action="#" method="POST" class="contact-form">
+                    
+                    <div class="form-group">
+                        <label for="name" data-key="formLabelName">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Ihr Name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" data-key="formLabelEmail">E-Mail *</label>
+                        <input type="email" id="email" name="email" required placeholder="Ihre E-Mail-Adresse">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" data-key="formLabelSubject">Betreff/Anliegen</label>
+                        <select id="subject" name="subject">
+                            <option value="" data-key="formOptionSelect">Bitte auswählen...</option>
+                            <option value="portrait" data-key="formOptionPortrait">Individuelles Porträt/Kunst</option>
+                            <option value="webdesign" data-key="formOptionWeb">Webdesign/Branding</option>
+                            <option value="mural" data-key="formOptionMural">Wandgemälde/Mural Art</option>
+                            <option value="other" data-key="formOptionOther">Sonstiges</option>
+                        </select>
+                    </div>
 
-            <a href="https://www.instagram.com/ваш-инстаграм" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
+                    <div class="form-group">
+                        <label for="message" data-key="formLabelMessage">Ihre Nachricht *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Beschreiben Sie Ihr Projekt oder Ihre Frage"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="cta-button form-submit-btn" data-key="formSubmitButton">
+                        Nachricht absenden
+                    </button>
+                    <p class="required-note" data-key="requiredFields">* Pflichtfelder sind mit einem Sternchen gekennzeichnet.</p>
+                </form>
+            </div>
 
-            <a href="https://www.facebook.com/ваш-фейсбук" target="_blank" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-        </div>
+     <div class="details-area-wrapper">
+    
+    <div class="contact-info-block">
+        <h3 data-key="contactInfoHeading"><i class="fas fa-info-circle"></i> Unsere Kontaktinformationen</h3>
+        
+        <ul class="contact-info-list">
+            <li>
+                <i class="fas fa-map-marker-alt"></i> 
+                <span data-key="contactAddress">Region Wesel, Deutschland (Online/Vor Ort nach Absprache)</span>
+            </li>
+            
+            <li>
+                <i class="fab fa-whatsapp"></i> 
+                <a href="https://wa.me/4917647156017" data-key="contactPhone" target="_blank">+49 176 47156017 (WhatsApp)</a>
+            </li>
+            
+            <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info@amarte-design.de" data-key="contactEmail">amartedesignstudio@gmail.com</a>
+            </li>
+        </ul>
+        
+       <div class="social-links" style="justify-content: flex-start; margin-top: 25px; margin-bottom: 0;">
+    <a href="https://wa.me/4917647156017" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    
+    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+</div>
+    </div>
 
-        <p class="footer-note" data-key="footerNote">
-            Amarte Design Studio startet offiziell im Januar 2026 – aber wir möchten euch schon jetzt überraschen!
+<div class="map-placeholder logo-vignette">
+    <div class="logo-area-content">
+        <img src="assets/media/logo.png" alt="Amarte Design Studio Logo" class="main-contact-logo">
+        
+        <p class="logo-slogan">
+            <i class="fas fa-quote-left"></i> Design, das begeistert. <i class="fas fa-quote-right"></i>
         </p>
     </div>
-</section>
+</div>
+</div>
+</div>
+    <!-- <div class="contact-logo-container">
+        <img src="assets/media/logo.png" alt="Amarte Design Studio Logo" class="contact-only-logo">
+    </div> -->
+</div>
+            </div>
+
+        </div>
+    </section>
+
+</main> 
 
 <footer>
     <div class="container" data-key="footer">
@@ -101,8 +142,6 @@
     </div>
 </footer>
 
-<!-- Подключаем тот же JS, что и на главной -->
-<script src="index.js"></script>
-
+<script src="translator.js"></script>
 </body>
 </html>
