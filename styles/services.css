@@ -1,0 +1,201 @@
+.services-hero {
+    background: linear-gradient(135deg, rgba(157, 182, 57, 0.25), rgba(184, 68, 116, 0.18));
+    padding: 70px 0 55px;
+    text-align: center;
+}
+
+.services-hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    color: var(--color-text-dark);
+}
+
+.services-tagline {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.65;
+}
+
+.services-page-main {
+    background: #ffffff;
+    padding: 65px 0 85px;
+}
+
+.services-page-main .service-list {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: center;
+}
+
+.services-page-main .service-item {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    width: 260px;
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-top: 6px solid var(--color-accent-lime);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+    transition: 0.3s ease;
+}
+
+.services-page-main .service-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.services-page-main .service-item i {
+    font-size: 2.4rem;
+    color: var(--color-accent-red);
+    margin-bottom: 15px;
+}
+
+.services-page-main .service-item h3 {
+    font-size: 1.3rem;
+    font-family: var(--font-heading);
+    margin-bottom: 12px;
+    color: var(--color-text-dark);
+}
+
+.services-page-main .service-item p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.services-extra-section {
+    background: #fafafa;
+    padding: 80px 0 100px;
+    text-align: center;
+}
+
+.services-extra-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2.1rem;
+    margin-bottom: 35px;
+    color: var(--color-text-dark);
+}
+
+.services-highlights {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.highlight {
+    width: 280px;
+    background: #ffffff;
+    border-left: 6px solid var(--color-accent-lime);
+    border-radius: 12px;
+    padding: 25px 22px;
+    text-align: left;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+    transition: 0.3s ease;
+}
+
+.highlight:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.13);
+}
+
+.highlight h3 {
+    font-size: 1.15rem;
+    color: var(--color-accent-red);
+    margin-bottom: 8px;
+}
+
+.highlight p {
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.services-extra-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+}
+
+.services-extra-block {
+    background: #ffffff;
+    padding: 35px 28px;
+    border-radius: 14px;
+    text-align: left;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    border-top: 6px solid var(--color-accent-red);
+    transform: translateY(30px);
+    opacity: 0;
+    transition: 0.7s ease;
+}
+
+.services-extra-block.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.services-extra-block h2 {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-text-dark);
+    margin-bottom: 12px;
+}
+
+.services-extra-block h2 i {
+    color: var(--color-accent-red);
+    font-size: 1.4rem;
+}
+
+.services-extra-block ul,
+.services-extra-block ol {
+    margin-top: 12px;
+}
+
+.services-extra-block li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #444;
+    padding-left: 6px;
+    position: relative;
+}
+
+.services-extra-block ul li::before {
+    content: "•";
+    color: var(--color-accent-lime);
+    position: absolute;
+    left: -10px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .highlight {
+        width: 90%;
+        text-align: center;
+        border-left: none;
+        border-top: 6px solid var(--color-accent-lime);
+    }
+
+    .services-extra-block {
+        text-align: center;
+        border-top-width: 6px;
+        border-left: none;
+    }
+
+    .services-extra-block h2 {
+        justify-content: center;
+    }
+}

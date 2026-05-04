@@ -7,7 +7,13 @@
 
     <link rel="icon" type="image/png" href="favicon.png">
 
-    <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/gallery.css">
+   <link rel="stylesheet" href="styles/index.css">
+   <link rel="stylesheet" href="styles/services.css">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap"
@@ -21,10 +27,16 @@
             <img src="assets/media/logo.png" alt="Amarte Design Studio Logo" class="logo-img">
         </div>
 
-        <nav>
-            <a href="index.html" data-key="navHome">Startseite</a>
+        <button class="menu-flower" type="button" aria-label="Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="main-nav">
+            <a href="index.html" class="active" data-key="navHome">Startseite</a>
             <a href="about.html" data-key="navAbout">Über Uns</a>
-            <a href="services.html" class="active" data-key="navServices">Leistungen</a>
+            <a href="services.html" data-key="navServices">Leistungen</a>
             <a href="gallery.html" data-key="navGallery">Galerie</a>
             <a href="promo.html" data-key="navPromo">Angebots</a>
             <a href="contact.html" data-key="navContact">Kontakt</a>
@@ -40,7 +52,7 @@
 </header>
 
 
-<!-- HERO БЛОК -->
+<!-- HERO SECTION -->
 <section class="services-hero">
     <div class="container">
         <h1 data-key="servicesHeading">
@@ -53,13 +65,13 @@
 </section>
 
 
-<!-- 4 ГЛАВНЫЕ КАТЕГОРИИ УСЛУГ -->
+<!-- MAIN SERVICE CATEGORIES -->
 <section class="services-section services-page-main">
     <div class="container">
 
         <div class="service-list service-list-wide">
 
-            <!-- 1 -->
+            <!-- SERVICE CATEGORY 1 -->
             <div class="service-item service-item-large">
                 <i class="fas fa-gift"></i>
                 <h3 data-key="service1Title">Handgefertigte Unikate</h3>
@@ -72,7 +84,7 @@
                 </ul>
             </div>
 
-            <!-- 2 -->
+            <!-- SERVICE CATEGORY 2 -->
             <div class="service-item service-item-large">
                 <i class="fas fa-paint-brush"></i>
                 <h3 data-key="service2Title">Porträts & Kunstwerke</h3>
@@ -85,7 +97,7 @@
                 </ul>
             </div>
 
-            <!-- 3 -->
+            <!-- SERVICE CATEGORY 3 -->
             <div class="service-item service-item-large">
                 <i class="fas fa-bookmark"></i>
                 <h3 data-key="service3Title">Buchzeichen & Kleinkunst</h3>
@@ -98,7 +110,7 @@
                 </ul>
             </div>
 
-            <!-- 4 -->
+            <!-- SERVICE CATEGORY 4 -->
             <div class="service-item service-item-large">
                 <i class="fas fa-bullhorn"></i>
                 <h3 data-key="service4Title">Grafik & Corporate Design</h3>
@@ -121,11 +133,11 @@
 </section>
 
 
-<!-- EXTRA БЛОК (WOW эффект) -->
+<!-- EXTRA SECTION (WOW EFFECT) -->
 <section class="services-extra-section">
     <div class="container services-highlights">
 
-        <!-- 1. FÜR WEN -->
+        <!-- TARGET AUDIENCE -->
         <div class="highlight">
             <h3 data-key="servicesForWhomTitle">Für wen ist Amarte Design Studio?</h3>
             <p data-key="servicesForWhomText">
@@ -139,7 +151,7 @@
             </ul>
         </div>
 
-        <!-- 2. ANLÄSSE -->
+        <!-- OCCASIONS -->
         <div class="highlight">
             <h3 data-key="servicesOccasionsTitle">Anlässe & besondere Momente</h3>
             <p data-key="servicesOccasionsText">
@@ -153,7 +165,7 @@
             </ul>
         </div>
 
-        <!-- 3. PROZESS -->
+        <!-- WORKFLOW / PROCESS -->
         <div class="highlight">
             <h3 data-key="servicesProcessTitle">Wie läuft eine Bestellung ab?</h3>
             <ol>

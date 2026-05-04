@@ -1,0 +1,255 @@
+.about-page-main {
+    padding-bottom: 80px;
+}
+
+.team-section {
+    padding: 60px 0;
+    background-color: var(--color-bg-light);
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 420px;
+    height: 550px;
+    perspective: 1000px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    transition: transform 0.6s, box-shadow 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: inherit;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: inherit;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card-front {
+    background-color: #FFFFFF;
+    z-index: 2;
+}
+
+.flip-card-back {
+    background-color: var(--color-text-dark);
+    color: #FFFFFF;
+    transform: rotateY(180deg);
+    text-align: left;
+    padding: 40px;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    transition: border 0.3s;
+}
+
+.flip-card-front h2 {
+    margin-bottom: 5px;
+    font-size: 2em;
+}
+
+.role-short {
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.flip-card-back h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.flip-card-back p {
+    font-size: 1.05em;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.tech-style .role-short {
+    color: var(--color-accent-lime);
+}
+
+.tech-border {
+    border: 6px solid var(--color-accent-lime);
+    box-shadow: 0 0 12px rgba(157, 182, 57, 0.8);
+}
+
+.tech-neon-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: var(--color-accent-lime);
+    box-shadow: 0 0 20px var(--color-accent-lime);
+    transition: width 0.4s ease-out;
+    width: 0;
+}
+
+.flip-card.tech-style:hover .flip-card-front::before {
+    width: 100%;
+}
+
+.flip-card-back.tech-frame {
+    border: 2px solid var(--color-accent-lime);
+    box-shadow: 0 0 15px var(--color-accent-lime), inset 0 0 15px var(--color-accent-lime);
+}
+
+.flip-card-back.tech-frame h3 {
+    text-shadow: 0 0 8px var(--color-accent-lime);
+}
+
+.art-style .role-short {
+    color: var(--color-accent-red);
+}
+
+.art-border {
+    border: 6px solid var(--color-accent-red);
+    box-shadow: 0 0 20px rgba(184, 68, 116, 0.6);
+}
+
+.flip-card-back.art-frame {
+    border: 2px solid var(--color-accent-red);
+    box-shadow: 0 0 20px rgba(184, 68, 116, 1), 0 0 8px rgba(184, 68, 116, 0.7) inset;
+}
+
+.flip-card-back.art-frame h3 {
+    color: var(--color-accent-red);
+    text-shadow: 0 0 8px rgba(184, 68, 116, 0.8);
+}
+
+.mission-section {
+    background-color: #FFFFFF;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.mission-section h2 {
+    color: var(--color-accent-red);
+    font-size: 2.2em;
+    border-bottom: 3px solid var(--color-accent-lime);
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+}
+
+.mission-intro {
+    font-size: 1.25em;
+    font-family: var(--font-heading);
+    color: var(--color-text-dark);
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.mission-core-values {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.mission-core-values .value-item {
+    flex: 1;
+    min-width: 280px;
+    background-color: var(--color-bg-light);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid var(--color-accent-red);
+    transition: transform 0.3s;
+}
+
+.mission-core-values .value-item:hover {
+    transform: translateY(-8px);
+}
+
+.mission-core-values .value-item i {
+    font-size: 3em;
+    color: var(--color-accent-lime);
+    margin-bottom: 15px;
+}
+
+.mission-core-values .value-item h3 {
+    font-size: 1.4em;
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+}
+
+.mission-core-values .value-item p {
+    font-size: 0.95em;
+    color: var(--color-text-grey);
+    text-align: left;
+}
+
+.mission-conclusion {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--color-accent-red);
+    margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+    .mission-core-values {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mission-core-values .value-item {
+        width: 90%;
+        max-width: 450px;
+    }
+
+    .team-grid {
+        gap: 50px;
+    }
+
+    .flip-card {
+        width: 90%;
+        max-width: 380px;
+        height: 500px;
+    }
+}

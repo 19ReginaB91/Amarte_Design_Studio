@@ -1,0 +1,14 @@
+:root {
+    --color-accent-lime: #9db639;
+    --color-accent-red: #b84474;
+    --color-bg-light: #F7F7F7;
+    --color-text-dark: #333333;
+    --color-header-bg: #FFFFFF;
+    --color-accent-lime-dark: #859a30;
+    --color-accent-lime-hover: #AACC00;
+    --color-accent-red-dark: #a03c62;
+    --color-accent-red-hover: #d04f7f;
+    --color-text-grey: #666666;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
