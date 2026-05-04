@@ -203,6 +203,27 @@
     text-align: left;
 }
 
+.contact-social-links {
+    margin-top: 25px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.contact-social-links a {
+    color: var(--color-accent-red);
+    font-size: 2.2em;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.contact-social-links a:hover {
+    color: var(--color-accent-lime);
+    transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
     .contact-main-grid {
         flex-direction: column;

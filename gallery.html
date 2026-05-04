@@ -6,14 +6,11 @@
     <title data-key="pageTitle">Amarte Design Studio — Galerie</title>
 
     <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="styles/global.css">
+
     <link rel="stylesheet" href="styles/variables.css">
-    <link rel="stylesheet" href="styles/about.css">
-    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/gallery.css">
-   <link rel="stylesheet" href="styles/index.css">
-   <link rel="stylesheet" href="styles/services.css">
-    <link rel="stylesheet" href="gallery-style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -32,10 +29,10 @@
         </button>
 
         <nav class="main-nav">
-            <a href="index.html" class="active" data-key="navHome">Startseite</a>
+            <a href="index.html" data-key="navHome">Startseite</a>
             <a href="about.html" data-key="navAbout">Über Uns</a>
             <a href="services.html" data-key="navServices">Leistungen</a>
-            <a href="gallery.html" data-key="navGallery">Galerie</a>
+            <a href="gallery.html" class="active" data-key="navGallery">Galerie</a>
             <a href="promo.html" data-key="navPromo">Angebots</a>
             <a href="contact.html" data-key="navContact">Kontakt</a>
         </nav>
@@ -128,18 +125,19 @@
             </div>
         </div>
     </section>
-
 </main>
 
 <div id="imageModal" class="modal">
     <span class="close" id="closeModal">&times;</span>
+
     <div class="modal-content">
         <img class="modal-img" id="modalImage" src="" alt="">
         <div class="modal-info">
             <p id="caption" class="modal-caption"></p>
-            <span class="art-category" data-key="modalCategory"></span>
+            <span class="art-category"></span>
         </div>
     </div>
+
     <a class="prev" id="prevButton">&#10094;</a>
     <a class="next" id="nextButton">&#10095;</a>
 </div>
@@ -151,6 +149,5 @@
 </footer>
 
 <script src="index.js"></script>
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </body>
 </html>
