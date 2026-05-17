@@ -11,7 +11,7 @@ const translations = {
         navAbout: 'Über Uns',
         navServices: 'Leistungen',
         navGallery: 'Galerie',
-        navPromo: 'Angebots',
+        navPromo: 'Angebote',
         navContact: 'Kontakt',
 
         heroHeading: 'Kunst, die von Herzen kommt.',
