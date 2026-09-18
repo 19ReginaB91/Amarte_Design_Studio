@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-key="pageTitle">Amarte Design Studio — Kunst, die berührt</title>
+    <title data-key="pageTitle">Amarte Design Studio — Persönliche Kunstgeschenke</title>
 
     <link rel="icon" type="image/png" href="favicon.png">
 
     <script>document.documentElement.classList.add('directing');setTimeout(function(){document.documentElement.classList.add('directing-ready');},4000);</script>
     <link rel="stylesheet" href="styles/variables.css">
-    <link rel="stylesheet" href="styles/global.css?v=5">
-    <link rel="stylesheet" href="styles/index.css?v=5">
-    <link rel="stylesheet" href="styles/directing.css?v=3">
+    <link rel="stylesheet" href="styles/global.css?v=6">
+    <link rel="stylesheet" href="styles/index.css?v=6">
+    <link rel="stylesheet" href="styles/directing.css?v=4">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
@@ -21,7 +21,9 @@
 <header>
     <div class="container header-content">
         <div class="logo">
-            <img src="assets/media/logo.png" alt="Amarte Design Studio Logo" class="logo-img">
+            <a href="index.html">
+                <img src="assets/media/logo.png" alt="Amarte Design Studio Logo" class="logo-img">
+            </a>
         </div>
 
         <button class="menu-flower" type="button" aria-label="Menu" aria-expanded="false">
@@ -37,6 +39,7 @@
             <a href="gallery.html" data-key="navGallery">Galerie</a>
             <a href="promo.html" data-key="navPromo">Angebote</a>
             <a href="contact.html" data-key="navContact">Kontakt</a>
+            <a class="header-cta" href="https://wa.me/4917647156017?text=Hallo%20Amarte%2C%20ich%20m%C3%B6chte%20ein%20Foto%20f%C3%BCr%20ein%20Kunstgeschenk%20senden." target="_blank" rel="noopener">Anfragen</a>
         </nav>
     </div>
 </header>
@@ -52,128 +55,124 @@
 
     <div class="hero-overlay">
         <div class="container hero-content">
-            <p class="hero-kicker">Amarte Design Studio</p>
-            <h1 data-key="heroHeading">Persönliche Kunstwerke, die bleiben.</h1>
-            <p data-key="heroSub">Handgemachte Geschenke, Porträts und Originalkunst nach Ihrer Geschichte.</p>
-            <a href="promo.html" class="cta-button" data-key="heroCTA">Angebote entdecken</a>
+            <p class="hero-kicker">Handgemachte Unikate · Wesel</p>
+            <h1>Ein Geschenk, das es nur einmal gibt.</h1>
+            <p>Porträt, Karte oder Mini-Kunst nach Ihrem Foto — für Geburtstag, Hochzeit oder einfach Danke. Senden Sie uns ein Bild, wir sagen Stil, Format und Preisrahmen.</p>
+            <div class="hero-actions">
+                <a href="https://wa.me/4917647156017?text=Hallo%20Amarte%2C%20ich%20m%C3%B6chte%20ein%20Foto%20f%C3%BCr%20ein%20Kunstgeschenk%20senden." class="cta-button" target="_blank" rel="noopener">Foto per WhatsApp senden</a>
+                <a href="#preise" class="hero-secondary">Preise ansehen</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="gallery-section">
+    <div class="container">
+        <h2>So sieht die Arbeit aus</h2>
+        <p class="intro-text">
+            Keine Massenware. Jedes Stück wird nach Ihrer Geschichte gemalt.
+        </p>
+
+        <div class="gallery-grid">
+            <img src="assets/media/mini-1.jpg" data-full="assets/media/mini-1.jpg" alt="Originalkunst mit persönlichem Ausdruck" class="gallery-item">
+            <img src="assets/media/mini-2.jpg" data-full="assets/media/mini-2.jpg" alt="Kunstvolle Arbeit für besondere Räume" class="gallery-item">
+            <img src="assets/media/mini-3.jpg" data-full="assets/media/mini-3.jpg" alt="Handgemachtes Unikat als Geschenkidee" class="gallery-item">
+            <img src="assets/media/mini-4.jpg" data-full="assets/media/mini-4.jpg" alt="Porträt und Erinnerung als Einzelstück" class="gallery-item">
+            <img src="assets/media/mini-5.jpg" data-full="assets/media/mini-5.jpg" alt="Persönliches Kunstgeschenk von Amarte" class="gallery-item">
+        </div>
+
+        <div class="gallery-more">
+            <a href="gallery.html" class="gallery-more-link">➜ Mehr Werke in der Galerie</a>
+        </div>
+    </div>
+</section>
+
+<section id="preise" class="entry-section">
+    <div class="container">
+        <h2>Einstieg, klar und ohne Überraschung</h2>
+        <p class="intro-text">Orientierungspreise. Das konkrete Angebot kommt, bevor die Arbeit beginnt.</p>
+
+        <div class="entry-grid">
+            <article class="entry-card">
+                <p class="entry-label">Kleines Geschenk</p>
+                <h3>Karten &amp; Mini-Kunst</h3>
+                <p>Für Geburtstage, Dankeschöns und liebevolle Überraschungen.</p>
+                <p class="entry-price">ab 25–45 EUR</p>
+                <a href="https://wa.me/4917647156017?text=Hallo%20Amarte%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20kleines%20Kunstgeschenk." target="_blank" rel="noopener">Geschenk anfragen</a>
+            </article>
+            <article class="entry-card is-featured">
+                <p class="entry-label">Am häufigsten gewählt</p>
+                <h3>Porträt nach Foto</h3>
+                <p>Mensch, Paar, Familie oder Haustier — digital oder handgemalt.</p>
+                <p class="entry-price">digital ab 79 EUR<br>handgemalt ab 150–250 EUR</p>
+                <a href="https://wa.me/4917647156017?text=Hallo%20Amarte%2C%20ich%20m%C3%B6chte%20ein%20Portr%C3%A4t%20nach%20Foto%20besprechen." target="_blank" rel="noopener">Porträt besprechen</a>
+            </article>
+            <article class="entry-card">
+                <p class="entry-label">Auftragskunst</p>
+                <h3>Leinwand &amp; Unikat</h3>
+                <p>Für Zuhause oder als großes Geschenk. Preis nach Format und Motiv.</p>
+                <p class="entry-price">individuelles Angebot</p>
+                <a href="https://wa.me/4917647156017?text=Hallo%20Amarte%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Auftragskunst%20auf%20Leinwand." target="_blank" rel="noopener">Format anfragen</a>
+            </article>
+        </div>
+        <p class="entry-more"><a href="promo.html">Alle Pakete und den Ablauf ansehen</a></p>
+    </div>
+</section>
+
+<section id="ablauf" class="path-section">
+    <div class="container">
+        <h2>So einfach geht die Bestellung</h2>
+        <div class="path-grid">
+            <div class="path-step">
+                <span>1</span>
+                <strong>Foto senden</strong>
+                <p>Anlass, Motiv und Wunschtermin reichen für den ersten Eindruck.</p>
+            </div>
+            <div class="path-step">
+                <span>2</span>
+                <strong>Rahmen hören</strong>
+                <p>Wir sagen Stil, Größe, Technik und einen klaren Preis, bevor es losgeht.</p>
+            </div>
+            <div class="path-step">
+                <span>3</span>
+                <strong>Unikat erhalten</strong>
+                <p>Erst nach Ihrer Zustimmung wird gemalt. Abholung oder Versand nach Absprache.</p>
+            </div>
         </div>
     </div>
 </section>
 
 <section id="about" class="about-section">
     <div class="container">
-        <h2><i class="fas fa-heart"></i> Unsere Philosophie</h2>
-        <p class="intro-text" data-key="aboutIntro">
-            <strong>Wir glauben: Ein Geschenk ist mehr als nur ein Objekt – es ist ein Gefühl, das bleibt.</strong>
+        <h2>Für Menschen, die nicht „irgendetwas“ schenken</h2>
+        <p class="intro-text">
+            <strong>Ein Geschenk ist mehr als ein Objekt — es ist ein Gefühl, das bleibt.</strong>
         </p>
         <p>
-            <strong>Amarte Design Studio</strong> gestaltet persönliche Kunstwerke für Menschen, die nicht einfach
-            „irgendetwas“ schenken möchten. Aus Fotos, Erinnerungen und kleinen Details entstehen handgemachte
-            Unikate: Porträts, Kunstgeschenke und Originalarbeiten, die eine eigene Geschichte tragen.
-            Jede Arbeit wird persönlich geplant, künstlerisch umgesetzt und mit Blick für Ausdruck, Farbe und Gefühl vollendet.
+            Amarte Design Studio in Wesel gestaltet persönliche Unikate aus Fotos und Erinnerungen.
+            Geplant und gemalt von Hand, mit Blick für Ausdruck, Farbe und die Person, die das Stück bekommen soll.
         </p>
-    </div>
-</section>
-
-<section id="services" class="services-section">
-    <div class="container">
-        <h2 data-key="servicesHeading"><i class="fas fa-palette"></i> Unser Leistungsspektrum</h2>
-
-        <div class="service-list">
-            <div class="service-item">
-                <i class="fas fa-gift"></i>
-                <h3>Personalisierte Geschenke</h3>
-                <p>
-                    Kleine Kunstwerke für Geburtstage, Hochzeiten, Jahrestage oder ein ehrliches Danke.
-                    Von Karten und Lesezeichen bis zu handbemalten Objekten.
-                </p>
-            </div>
-
-            <div class="service-item">
-                <i class="fas fa-paint-brush"></i>
-                <h3 data-key="service2Title">Porträts & Kunstwerke</h3>
-                <p data-key="service2Text">
-                    Individuelle Porträts nach Foto: für Menschen, Paare, Familien oder Haustiere.
-                    Persönlich abgestimmt und als Geschenk bereit.
-                </p>
-            </div>
-
-            <div class="service-item">
-                <i class="fas fa-bookmark"></i>
-                <h3 data-key="service3Title">Originalkunst auf Leinwand</h3>
-                <p data-key="service3Text">
-                    Auftragskunst für Zuhause, Praxis, Studio oder besondere Räume.
-                </p>
-            </div>
-
-            <div class="service-item">
-                <i class="fas fa-bullhorn"></i>
-                <h3 data-key="service4Title">Für Unternehmen</h3>
-                <p data-key="service4Text">
-                    Kunstvolle Lösungen für Kundengeschenke, Räume und kleine Markenmomente.
-                </p>
-            </div>
-        </div>
-
-        <p class="guarantee-text" data-key="servicesGuarantee">
-            Jede Anfrage wird persönlich abgestimmt: Motiv, Format, Stil, Budget und Termin.
-        </p>
-    </div>
-</section>
-
-<section id="gallery" class="gallery-section">
-    <div class="container">
-        <h2 data-key="galleryHeading"><i class="fas fa-image"></i> Unsere Kunstwerke</h2>
-        <p class="intro-text" data-key="galleryIntro">
-            Entdecken Sie eine Auswahl unserer handgefertigten Unikate und Porträts.
-            Klicken Sie auf ein Bild, um es in voller Größe zu sehen.
-        </p>
-
-        <div class="gallery-grid">
-            <img src="assets/media/mini-1.jpg" data-full="assets/media/mini-1.jpg" alt="Gemälde 1" class="gallery-item">
-            <img src="assets/media/mini-2.jpg" data-full="assets/media/mini-2.jpg" alt="Gemälde 2" class="gallery-item">
-            <img src="assets/media/mini-3.jpg" data-full="assets/media/mini-3.jpg" alt="Gemälde 3" class="gallery-item">
-            <img src="assets/media/mini-4.jpg" data-full="assets/media/mini-4.jpg" alt="Gemälde 4" class="gallery-item">
-        </div>
-
-        <div class="gallery-more">
-            <a href="gallery.html" class="gallery-more-link" data-key="galleryMore">➜ Weiter zur Galerie</a>
-        </div>
-
-        <p class="guarantee-text">
-            Alle Werke sind handgefertigt und einzigartig.
-        </p>
-    </div>
-</section>
-
-<section id="promo" class="promo-section">
-    <div class="container">
-        <h2 data-key="promoHeading">Wählen Sie Ihr Kunstgeschenk</h2>
-        <p class="discount-text" data-key="promoDiscount">
-            Starten Sie mit einem kleinen Unikat, einem Porträt oder einem Originalkunstwerk.
-        </p>
-        <p data-key="promoText">
-            Wir beraten Sie persönlich zu Motiv, Format, Technik und Budget.
-        </p>
-        <a href="promo.html" class="cta-button" data-key="promoCTA">Pakete ansehen</a>
+        <p><a href="about.html" class="gallery-more-link">Mehr über uns</a></p>
     </div>
 </section>
 
 <section id="contact" class="contact-section">
     <div class="container">
-        <h2 data-key="contactHeading"><i class="fas fa-envelope"></i> Kontakt</h2>
+        <h2>Bereit für die erste Idee?</h2>
+        <p class="contact-lead">Schreiben Sie uns auf WhatsApp — auch nur mit einem Foto. Wir antworten persönlich.</p>
+
+        <a href="https://wa.me/4917647156017?text=Hallo%20Amarte%2C%20ich%20m%C3%B6chte%20ein%20Foto%20f%C3%BCr%20ein%20Kunstgeschenk%20senden." class="cta-button" target="_blank" rel="noopener">WhatsApp öffnen</a>
 
         <div class="contact-details">
             <p>
                 <i class="fas fa-map-marker-alt"></i>
-                <strong data-key="contactAddress">Adresse:</strong>
+                <strong>Adresse:</strong>
                 Wesel 46485
             </p>
 
             <p>
                 <i class="fas fa-at"></i>
-                <strong data-key="contactEmail">E-Mail:</strong>
-
+                <strong>E-Mail:</strong>
                 <a href="mailto:amartedesignstudio@gmail.com" class="contact-email-link">
                     amartedesignstudio@gmail.com
                 </a>
@@ -182,25 +181,16 @@
             <p>
                 <i class="fab fa-whatsapp"></i>
                 <strong>WhatsApp:</strong>
-                <a href="https://wa.me/4917647156017" target="_blank" class="contact-email-link">
+                <a href="https://wa.me/4917647156017" target="_blank" rel="noopener" class="contact-email-link">
                     +49 176 47156017
                 </a>
             </p>
         </div>
-
-        <div class="social-links">
-            <a href="https://wa.me/4917647156017" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="mailto:amartedesignstudio@gmail.com" aria-label="E-Mail"><i class="fas fa-envelope"></i></a>
-        </div>
-
-        <p class="footer-note" data-key="footerNote">
-            Persönliche Anfragen sind bereits möglich. Wir freuen uns auf Ihre Idee.
-        </p>
     </div>
 </section>
 
 <footer>
-    <div class="container" data-key="footer">
+    <div class="container">
         &copy; 2026 Amarte Design Studio. Alle Rechte vorbehalten.
     </div>
 </footer>
@@ -215,7 +205,7 @@
     </div>
 </div>
 
-<script src="index.js?v=3"></script>
-<script src="directing.js?v=3"></script>
+<script src="index.js?v=4"></script>
+<script src="directing.js?v=4"></script>
 </body>
 </html>

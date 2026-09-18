@@ -30,7 +30,9 @@
         '.business-offer .container',
         '.price-note-section .container',
         '.contact-page-main .container',
-        '.services-extra-section .container'
+        '.services-extra-section .container',
+        '.entry-section .container',
+        '.path-section .container'
     ].join(', ');
 
     function mark(el, preset, delay) {
