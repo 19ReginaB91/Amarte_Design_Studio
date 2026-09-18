@@ -32,7 +32,8 @@
         '.contact-page-main .container',
         '.services-extra-section .container',
         '.entry-section .container',
-        '.path-section .container'
+        '.path-section .container',
+        '.work-example-section .container'
     ].join(', ');
 
     function mark(el, preset, delay) {
