@@ -8,22 +8,9 @@ html.directing:not(.directing-ready):not(.directing-reduced) .hero-content,
 html.directing:not(.directing-ready):not(.directing-reduced) .services-hero .container,
 html.directing:not(.directing-ready):not(.directing-reduced) .gallery-hero .container,
 html.directing:not(.directing-ready):not(.directing-reduced) .promo-hero .container,
-html.directing:not(.directing-ready):not(.directing-reduced) .contact-hero-section .container,
-html.directing:not(.directing-ready):not(.directing-reduced) .about-section .container,
-html.directing:not(.directing-ready):not(.directing-reduced) .services-section .container,
-html.directing:not(.directing-ready):not(.directing-reduced) .gallery-section .container,
-html.directing:not(.directing-ready):not(.directing-reduced) .promo-section .container,
-html.directing:not(.directing-ready):not(.directing-reduced) .contact-section .container,
-html.directing:not(.directing-ready):not(.directing-reduced) .mission-section .container,
-html.directing:not(.directing-ready):not(.directing-reduced) .team-section .container,
-html.directing:not(.directing-ready):not(.directing-reduced) .artwork-grid-section .container,
-html.directing:not(.directing-ready):not(.directing-reduced) .offer-section .container,
-html.directing:not(.directing-ready):not(.directing-reduced) .business-offer .container,
-html.directing:not(.directing-ready):not(.directing-reduced) .price-note-section .container,
-html.directing:not(.directing-ready):not(.directing-reduced) .contact-page-main .container,
-html.directing:not(.directing-ready):not(.directing-reduced) .services-extra-section .container {
+html.directing:not(.directing-ready):not(.directing-reduced) .contact-hero-section .container {
     opacity: 0;
-    transform: translate3d(0, 1.15rem, 0);
+    transform: translate3d(0, 0.7rem, 0);
 }
 
 html.directing:not(.directing-reduced) [data-direct]:not(.is-in) {

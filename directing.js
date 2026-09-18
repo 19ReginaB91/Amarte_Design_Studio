@@ -44,7 +44,7 @@
         const preset = el.classList.contains('hero-content') || el.closest('.services-hero, .gallery-hero, .promo-hero, .contact-hero-section')
             ? 'hero'
             : 'scene';
-        mark(el, preset, preset === 'hero' ? 120 : 0);
+        mark(el, preset, preset === 'hero' ? 80 : 0);
     });
 
     root.classList.add('directing-ready');
@@ -74,10 +74,20 @@
     document.querySelectorAll('[data-direct]').forEach((el) => {
         const rect = el.getBoundingClientRect();
         const inFirstScreen = rect.top < window.innerHeight * 0.86 && rect.bottom > 40;
-        if (inFirstScreen) {
-            reveal(el);
-        } else {
-            observer.observe(el);
+        const isHero = el.getAttribute('data-direct') === 'hero';
+
+        if (inFirstScreen && !isHero) {
+            el.classList.add('is-in');
+            el.removeAttribute('data-direct');
+            el.style.removeProperty('--direct-delay');
+            return;
         }
+
+        if (inFirstScreen && isHero) {
+            window.requestAnimationFrame(() => reveal(el));
+            return;
+        }
+
+        observer.observe(el);
     });
 })();
