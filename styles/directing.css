@@ -1,83 +1,52 @@
-/* Режиссура — motion only. No layout, color, or image changes. */
+/* Режиссура Amarte — тихие сцены, не агентский stagger. */
 
 html.directing {
     scroll-behavior: smooth;
 }
 
-html.directing body {
-    overflow-x: hidden;
-}
-
-html.directing.directing-leave body {
+html.directing:not(.directing-ready):not(.directing-reduced) .hero-content,
+html.directing:not(.directing-ready):not(.directing-reduced) .services-hero .container,
+html.directing:not(.directing-ready):not(.directing-reduced) .gallery-hero .container,
+html.directing:not(.directing-ready):not(.directing-reduced) .promo-hero .container,
+html.directing:not(.directing-ready):not(.directing-reduced) .contact-hero-section .container,
+html.directing:not(.directing-ready):not(.directing-reduced) .about-section .container,
+html.directing:not(.directing-ready):not(.directing-reduced) .services-section .container,
+html.directing:not(.directing-ready):not(.directing-reduced) .gallery-section .container,
+html.directing:not(.directing-ready):not(.directing-reduced) .promo-section .container,
+html.directing:not(.directing-ready):not(.directing-reduced) .contact-section .container,
+html.directing:not(.directing-ready):not(.directing-reduced) .mission-section .container,
+html.directing:not(.directing-ready):not(.directing-reduced) .team-section .container,
+html.directing:not(.directing-ready):not(.directing-reduced) .artwork-grid-section .container,
+html.directing:not(.directing-ready):not(.directing-reduced) .offer-section .container,
+html.directing:not(.directing-ready):not(.directing-reduced) .business-offer .container,
+html.directing:not(.directing-ready):not(.directing-reduced) .price-note-section .container,
+html.directing:not(.directing-ready):not(.directing-reduced) .contact-page-main .container,
+html.directing:not(.directing-ready):not(.directing-reduced) .services-extra-section .container {
     opacity: 0;
-    transition: opacity 0.42s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-html.directing.directing-enter body {
-    animation: directing-page-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-@keyframes directing-page-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-html.directing:not(.directing-ready):not(.directing-reduced) .hero-content > *,
-html.directing:not(.directing-ready):not(.directing-reduced) .services-hero .container > *,
-html.directing:not(.directing-ready):not(.directing-reduced) .gallery-hero .container > *,
-html.directing:not(.directing-ready):not(.directing-reduced) .promo-hero .container > *,
-html.directing:not(.directing-ready):not(.directing-reduced) .contact-hero-section .container > *,
-html.directing:not(.directing-ready):not(.directing-reduced) .service-item,
-html.directing:not(.directing-ready):not(.directing-reduced) .gallery-grid > .gallery-item,
-html.directing:not(.directing-ready):not(.directing-reduced) .art-grid > .gallery-item,
-html.directing:not(.directing-ready):not(.directing-reduced) .value-item,
-html.directing:not(.directing-ready):not(.directing-reduced) .flip-card,
-html.directing:not(.directing-ready):not(.directing-reduced) .offer-card,
-html.directing:not(.directing-ready):not(.directing-reduced) .step-card,
-html.directing:not(.directing-ready):not(.directing-reduced) .highlight,
-html.directing:not(.directing-ready):not(.directing-reduced) .form-area-wrapper,
-html.directing:not(.directing-ready):not(.directing-reduced) .details-area-wrapper {
-    opacity: 0;
-    transform: translate3d(0, 2.75rem, 0);
+    transform: translate3d(0, 1.15rem, 0);
 }
 
 html.directing:not(.directing-reduced) [data-direct]:not(.is-in) {
     opacity: 0;
-    transform: translate3d(0, 2.75rem, 0);
+    transform: translate3d(0, 1.15rem, 0);
     will-change: opacity, transform;
 }
 
-html.directing:not(.directing-reduced) [data-direct="media"]:not(.is-in) {
-    transform: translate3d(0, 2.25rem, 0) scale(1.045);
-}
-
 html.directing:not(.directing-reduced) [data-direct="hero"]:not(.is-in) {
-    transform: translate3d(0, 3.25rem, 0);
+    transform: translate3d(0, 0.7rem, 0);
 }
 
 html.directing [data-direct].is-in {
     opacity: 1;
     transform: none;
     transition:
-        opacity 1.05s cubic-bezier(0.22, 1, 0.36, 1) var(--direct-delay, 0ms),
-        transform 1.05s cubic-bezier(0.22, 1, 0.36, 1) var(--direct-delay, 0ms);
-}
-
-html.directing .hero-backgrounds {
-    will-change: transform;
-    transform-origin: center center;
+        opacity 0.9s ease-out var(--direct-delay, 0ms),
+        transform 0.9s ease-out var(--direct-delay, 0ms);
 }
 
 @media (prefers-reduced-motion: reduce) {
     html.directing,
-    html.directing body,
-    html.directing [data-direct],
-    html.directing.directing-leave body,
-    html.directing.directing-enter body {
+    html.directing [data-direct] {
         opacity: 1 !important;
         transform: none !important;
         animation: none !important;
