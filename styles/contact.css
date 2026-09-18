@@ -38,13 +38,7 @@
     padding: 40px;
     border-radius: 12px;
     border: 1px solid rgba(157, 182, 57, 0.55);
-    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.10);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-area-wrapper:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .form-area-wrapper h2 {
@@ -71,7 +65,7 @@
     border-radius: 12px;
     background: linear-gradient(145deg, #ffffff 0%, #fcfcfc 100%);
     border-bottom: 8px solid var(--color-accent-lime);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     color: var(--color-text-dark);
 }
 
