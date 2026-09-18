@@ -20,15 +20,14 @@
     height: 550px;
     perspective: 1000px;
     cursor: pointer;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
     border-radius: 12px;
-    transition: transform 0.6s, box-shadow 0.6s;
+    transition: box-shadow 0.3s ease;
     transform-style: preserve-3d;
 }
 
 .flip-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .flip-card-inner {
@@ -65,8 +64,8 @@
 }
 
 .flip-card-back {
-    background-color: var(--color-text-dark);
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: var(--color-text-dark);
     transform: rotateY(180deg);
     text-align: left;
     padding: 40px;
@@ -111,34 +110,11 @@
 }
 
 .tech-border {
-    border: 6px solid var(--color-accent-lime);
-    box-shadow: 0 0 12px rgba(157, 182, 57, 0.8);
-}
-
-.tech-neon-glow::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: var(--color-accent-lime);
-    box-shadow: 0 0 20px var(--color-accent-lime);
-    transition: width 0.4s ease-out;
-    width: 0;
-}
-
-.flip-card.tech-style:hover .flip-card-front::before {
-    width: 100%;
-}
-
-.flip-card-back.tech-frame {
-    border: 2px solid var(--color-accent-lime);
-    box-shadow: 0 0 15px var(--color-accent-lime), inset 0 0 15px var(--color-accent-lime);
+    border: 3px solid var(--color-accent-lime);
 }
 
 .flip-card-back.tech-frame h3 {
-    text-shadow: 0 0 8px var(--color-accent-lime);
+    color: var(--color-accent-lime);
 }
 
 .art-style .role-short {
@@ -146,18 +122,11 @@
 }
 
 .art-border {
-    border: 6px solid var(--color-accent-red);
-    box-shadow: 0 0 20px rgba(184, 68, 116, 0.6);
-}
-
-.flip-card-back.art-frame {
-    border: 2px solid var(--color-accent-red);
-    box-shadow: 0 0 20px rgba(184, 68, 116, 1), 0 0 8px rgba(184, 68, 116, 0.7) inset;
+    border: 3px solid var(--color-accent-red);
 }
 
 .flip-card-back.art-frame h3 {
     color: var(--color-accent-red);
-    text-shadow: 0 0 8px rgba(184, 68, 116, 0.8);
 }
 
 .mission-section {
@@ -198,17 +167,17 @@
     background-color: var(--color-bg-light);
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    border-top: 5px solid var(--color-accent-red);
-    transition: transform 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border-top: 4px solid var(--color-accent-red);
+    transition: box-shadow 0.3s ease;
 }
 
 .mission-core-values .value-item:hover {
-    transform: translateY(-8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
 }
 
 .mission-core-values .value-item i {
-    font-size: 3em;
+    font-size: 2.1em;
     color: var(--color-accent-lime);
     margin-bottom: 15px;
 }
