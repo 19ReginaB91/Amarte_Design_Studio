@@ -618,7 +618,44 @@ function initBurgerMenu() {
 
 
 // ===========================================
-// 7. INITIALIZATION
+// 7. CONTACT INQUIRY (WhatsApp)
+// ===========================================
+
+function initInquiryForm() {
+    const form = document.querySelector('.contact-form');
+    if (!form) return;
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const name = (form.querySelector('#name') || {}).value || '';
+        const email = (form.querySelector('#email') || {}).value || '';
+        const subjectField = form.querySelector('#subject');
+        const subject = subjectField && subjectField.options[subjectField.selectedIndex]
+            ? subjectField.options[subjectField.selectedIndex].text
+            : '';
+        const message = (form.querySelector('#message') || {}).value || '';
+
+        const text = [
+            'Hallo Amarte,',
+            'ich bin ' + name.trim() + '.',
+            'E-Mail: ' + email.trim(),
+            subject && subject !== 'Bitte auswählen...' ? 'Anliegen: ' + subject : '',
+            '',
+            message.trim()
+        ].filter(Boolean).join('\n');
+
+        window.open(
+            'https://wa.me/4917647156017?text=' + encodeURIComponent(text),
+            '_blank',
+            'noopener'
+        );
+    });
+}
+
+
+// ===========================================
+// 8. INITIALIZATION
 // ===========================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -653,6 +690,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.gallery-item')) {
         initGalleryModal();
     }
+
+    initInquiryForm();
 
     /*
     document.querySelectorAll('.lang-button').forEach(button => {
