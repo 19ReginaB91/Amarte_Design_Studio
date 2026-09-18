@@ -1,20 +1,27 @@
 .services-hero {
-    background: linear-gradient(135deg, rgba(157, 182, 57, 0.25), rgba(184, 68, 116, 0.18));
-    padding: 70px 0 55px;
+    background:
+        linear-gradient(rgba(16, 32, 48, 0.48), rgba(16, 32, 48, 0.55)),
+        url('../assets/media/canvas-meer.jpg') center/cover;
+    color: #ffffff;
+    padding: 100px 0 85px;
     text-align: center;
 }
 
 .services-hero h1 {
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     margin-bottom: 15px;
-    color: var(--color-text-dark);
+    color: #ffffff;
+}
+
+.services-hero h1 i {
+    color: var(--color-accent-lime);
 }
 
 .services-tagline {
     max-width: 750px;
     margin: 0 auto;
     font-size: 1.1rem;
-    color: #444;
+    color: rgba(255, 255, 255, 0.92);
     line-height: 1.65;
 }
 
